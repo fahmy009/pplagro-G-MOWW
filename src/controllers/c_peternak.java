@@ -1,0 +1,82 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package controllers;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import models.m_sapi;
+import models.m_user;
+import models.m_validasi;
+import views.v_ADMINSAPI;
+import views.v_LOGIN;
+import views.v_PENGHITUNG;
+import views.v_PETERNAK;
+import views.v_LAPORAN;
+import views.v_VALIDASI;
+
+/**
+ *
+ * @author Muhammad Fahmy
+ */
+public class c_peternak {
+
+    v_PETERNAK view;
+
+    public c_peternak(v_PETERNAK view) {
+        this.view = view;
+        view.setVisible(true);
+        view.getBtnPertumbuhan(new btnPertumbuhan());
+        view.getBtnValidasi(new btnValidasi());
+        view.getBtnPenghitung(new btnHitung());
+        view.getBtnLogout(new btnLogout());
+    }
+
+    private class btnHitung implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            try {
+                c_hitung a = new c_hitung(new v_PENGHITUNG(), new m_sapi());
+                view.dispose();
+            } catch (SQLException ex) {
+                Logger.getLogger(c_peternak.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+    }
+
+    private class btnPertumbuhan implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+        }
+
+    }
+
+    private class btnValidasi implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+        }
+    }
+
+    private class btnLogout implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            try {
+                c_user a = new c_user(new v_LOGIN(), new m_user());
+                view.dispose();
+            } catch (SQLException ex) {
+                Logger.getLogger(c_peternak.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
+
+}
