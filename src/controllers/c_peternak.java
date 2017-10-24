@@ -19,6 +19,7 @@ import views.v_PENGHITUNG;
 import views.v_PETERNAK;
 import views.v_LAPORAN;
 import views.v_VALIDASI;
+import views.v_VALIDASI_P;
 
 /**
  *
@@ -63,6 +64,13 @@ public class c_peternak {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            try {
+                c_validasi a = new c_validasi(new v_VALIDASI_P(), new m_validasi());
+                view.dispose();
+            } catch (SQLException ex) {
+                Logger.getLogger(c_peternak.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
         }
     }
 

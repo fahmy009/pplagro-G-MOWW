@@ -16,6 +16,7 @@ import javax.swing.ButtonModel;
 import models.koneksi;
 import models.m_sapi;
 import views.v_LAPORAN;
+import views.v_PETERNAK;
 
 /**
  *
@@ -43,6 +44,7 @@ public class c_laporan {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            
         }
     }
 
@@ -50,6 +52,8 @@ public class c_laporan {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            c_peternak a = new c_peternak(new v_PETERNAK());
+            views.dispose();
         }
     }
 

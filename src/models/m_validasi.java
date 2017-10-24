@@ -5,7 +5,9 @@
  */
 package models;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -26,5 +28,22 @@ public class m_validasi extends modelInheritance{
         return super.update(queries); //To change body of generated methods, choose Tools | Templates.
     }
     
+     public DefaultTableModel getTable() throws SQLException {
+        String header[] = {"Id Kandang", "Nomor Kandang", "Kapasitas Kandang"};
+        DefaultTableModel tabelModel = new DefaultTableModel(null, header);
+        ResultSet rs = kon.getResult("SELECT * from kandang");
+        for (int i = tabelModel.getRowCount() - 1; i >= 0; i--) {
+            tabelModel.removeRow(i);
+        }
+        while (rs.next()) {
+            String kolom[] = new String[3];
+            for (int i = 0; i < kolom.length; i++) {
+                kolom[i] = rs.getString(i + 1);
+            }
+
+            tabelModel.addRow(kolom);
+        }
+        return tabelModel;
+    }
     
 }
