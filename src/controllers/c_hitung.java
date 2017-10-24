@@ -84,7 +84,7 @@ public class c_hitung {
                 view.getHasilHitungan().setText(Double.toString(hasil));
             } else {
                 view.getLingkarDada().setText("");
-                JOptionPane.showMessageDialog(view, "ewewew");
+                JOptionPane.showMessageDialog(view, "Silahkan Masukkan Angka dengan Benar");
             }
         }
 

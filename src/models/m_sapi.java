@@ -21,6 +21,8 @@ public class m_sapi extends modelInheritance {
 
     koneksi kon;
     public static String coba;
+    public static double berat;
+    public static double umur;
 
     public m_sapi() throws SQLException {
         super();
@@ -87,11 +89,77 @@ public class m_sapi extends modelInheritance {
         ResultSet rs = kon.getResult(query);
         while (rs.next()) {
             coba = rs.getString("id_sapi");
+            berat = rs.getDouble("berat_sapi");
+            umur = rs.getDouble("umur_sapi");
         }
         return coba;
     }
-    
+
+    public double umur(String id) throws SQLException {
+        String query = "SELECT * FROM sapi WHERE id_sapi=" + id;
+        ResultSet rs = kon.getResult(query);
+        while (rs.next()) {
+            umur = rs.getDouble("umur_sapi");
+        }
+        return umur;
+    }
+
+    public double berat(String id) throws SQLException {
+        String query = "SELECT * FROM sapi WHERE id_sapi=" + id;
+        ResultSet rs = kon.getResult(query);
+        while (rs.next()) {
+            berat = rs.getDouble("berat_sapi");
+            umur = rs.getDouble("umur_sapi");
+        }
+        return berat;
+    }
+
     public String[] kandang() throws SQLException {
+        String query = "SELECT * FROM kandang";
+        ResultSet rs = kon.getResult(query);
+        rs.last();
+        String tahun[] = new String[rs.getRow()];
+        rs.beforeFirst();
+        int a = 0;
+        while (rs.next()) {
+            tahun[a] = rs.getString("id_kandang");
+            a++;
+        }
+        a = 0;
+        return tahun;
+    }
+
+    public String[] pakan() throws SQLException {
+        String query = "SELECT * FROM makanan m join jenis_makanan j ON m.id_jenis=j.id_jenis JOIN nama_makanan n ON m.id_nama_makanan=n.id_nama_makanan";
+        ResultSet rs = kon.getResult(query);
+        rs.last();
+        String tahun[] = new String[rs.getRow()];
+        rs.beforeFirst();
+        int a = 0;
+        while (rs.next()) {
+            tahun[a] = rs.getString("n.nama_makanan");
+            a++;
+        }
+        a = 0;
+        return tahun;
+    }
+
+    public String[] vitamin() throws SQLException {
+        String query = "SELECT * FROM kandang";
+        ResultSet rs = kon.getResult(query);
+        rs.last();
+        String tahun[] = new String[rs.getRow()];
+        rs.beforeFirst();
+        int a = 0;
+        while (rs.next()) {
+            tahun[a] = rs.getString("id_kandang");
+            a++;
+        }
+        a = 0;
+        return tahun;
+    }
+
+    public String[] vaksin() throws SQLException {
         String query = "SELECT * FROM kandang";
         ResultSet rs = kon.getResult(query);
         rs.last();

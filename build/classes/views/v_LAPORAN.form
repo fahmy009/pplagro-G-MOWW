@@ -44,28 +44,32 @@
                                   <Component id="lumur" min="-2" max="-2" attributes="0"/>
                                   <Component id="lpakan" min="-2" max="-2" attributes="0"/>
                                   <Component id="lvaksin" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lvitamin" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lvitamin" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="umurSapi" max="32767" attributes="0"/>
-                                  <Component id="cbPakan" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="rIya" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="32" max="32767" attributes="0"/>
-                                      <Component id="cbVitamin" min="-2" pref="196" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="rIyaV" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="cbVaksin" min="-2" pref="196" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="cbPakan" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="umurSapi" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="rtidak" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rTidakV" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              <Component id="cek" min="-2" pref="22" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="cek2" min="-2" pref="22" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="cbVaksin" alignment="1" pref="250" max="32767" attributes="0"/>
+                                          <Component id="cbVitamin" alignment="1" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
                           </Group>
@@ -75,7 +79,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnKembali" min="-2" pref="127" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-                      <Component id="btnHitung" max="32767" attributes="0"/>
+                      <Component id="btnHitung" pref="169" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
@@ -117,41 +121,32 @@
                           <Component id="cbPakan" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
                           <Component id="lpakan" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
+                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" max="-2" attributes="0">
                           <Component id="lvitamin" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="rIya" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbVitamin" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="cbVitamin" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                          <Component id="cek" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="rtidak" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                               <Component id="lvaksin" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="rIyaV" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cbVaksin" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="rTidakV" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="cbVaksin" alignment="0" max="32767" attributes="0"/>
+                          <Component id="cek2" pref="44" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="34" max="32767" attributes="0"/>
+                      <EmptySpace pref="61" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnHitung" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                           <Component id="btnKembali" alignment="3" min="-2" pref="59" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="jScrollPane2" max="32767" attributes="0"/>
+                  <Component id="jScrollPane2" pref="165" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
           </Group>
@@ -173,6 +168,9 @@
       <SubComponents>
         <Component class="javax.swing.JTable" name="tableSapi">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="4" rowCount="4">
                 <Column editable="true" title="Title 1" type="java.lang.Object"/>
@@ -180,6 +178,10 @@
                 <Column editable="true" title="Title 3" type="java.lang.Object"/>
                 <Column editable="true" title="Title 4" type="java.lang.Object"/>
               </Table>
+            </Property>
+            <Property name="enabled" type="boolean" value="false"/>
+            <Property name="gridColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
         </Component>
@@ -196,15 +198,15 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="beratSapi">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="cbNomor">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="1">
+            <StringItem index="0" value="-"/>
           </StringArray>
         </Property>
       </Properties>
@@ -218,15 +220,15 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="umurSapi">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="cbPakan">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="1">
+            <StringItem index="0" value="-"/>
           </StringArray>
         </Property>
       </Properties>
@@ -243,6 +245,7 @@
       <SubComponents>
         <Component class="javax.swing.JTextArea" name="saran">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
           </Properties>
@@ -264,60 +267,41 @@
         <Property name="text" type="java.lang.String" value="VITAMIN"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="rIya">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="YA"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JComboBox" name="cbVitamin">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="1">
+            <StringItem index="0" value="-"/>
           </StringArray>
         </Property>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="rtidak">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="TIDAK"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="cbVaksin">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="1">
+            <StringItem index="0" value="-"/>
           </StringArray>
         </Property>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="rIyaV">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="YA"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="rTidakV">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="TIDAK"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JButton" name="btnHitung">
       <Properties>
         <Property name="text" type="java.lang.String" value="HITUNG &amp; UPDATE"/>
+        <Property name="contentAreaFilled" type="boolean" value="false"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="cek">
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="cek2">
     </Component>
   </SubComponents>
 </Form>

@@ -5,6 +5,15 @@
  */
 package views;
 
+import java.awt.event.ItemListener;
+import javax.swing.ButtonGroup;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JRadioButton;
+import javax.swing.JTable;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Muhammad Fahmy
@@ -42,18 +51,17 @@ public class v_LAPORAN extends javax.swing.JFrame {
         lpakan = new javax.swing.JLabel();
         lvaksin = new javax.swing.JLabel();
         lvitamin = new javax.swing.JLabel();
-        rIya = new javax.swing.JRadioButton();
         cbVitamin = new javax.swing.JComboBox<>();
-        rtidak = new javax.swing.JRadioButton();
         cbVaksin = new javax.swing.JComboBox<>();
-        rIyaV = new javax.swing.JRadioButton();
-        rTidakV = new javax.swing.JRadioButton();
         btnHitung = new javax.swing.JButton();
+        cek = new javax.swing.JCheckBox();
+        cek2 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnKembali.setText("KEMBALI");
 
+        tableSapi.setForeground(new java.awt.Color(255, 255, 255));
         tableSapi.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -65,18 +73,25 @@ public class v_LAPORAN extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tableSapi.setEnabled(false);
+        tableSapi.setGridColor(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(tableSapi);
 
         lnomor.setText("NOMOR SAPI");
 
         lberat.setText("BERAT SAPI");
 
-        cbNomor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        beratSapi.setEnabled(false);
+
+        cbNomor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
 
         lumur.setText("UMUR SAPI");
 
-        cbPakan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        umurSapi.setEnabled(false);
 
+        cbPakan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
+
+        saran.setEditable(false);
         saran.setColumns(20);
         saran.setRows(5);
         jScrollPane2.setViewportView(saran);
@@ -87,19 +102,14 @@ public class v_LAPORAN extends javax.swing.JFrame {
 
         lvitamin.setText("VITAMIN");
 
-        rIya.setText("YA");
+        cbVitamin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
+        cbVitamin.setEnabled(false);
 
-        cbVitamin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        rtidak.setText("TIDAK");
-
-        cbVaksin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        rIyaV.setText("YA");
-
-        rTidakV.setText("TIDAK");
+        cbVaksin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
+        cbVaksin.setEnabled(false);
 
         btnHitung.setText("HITUNG & UPDATE");
+        btnHitung.setContentAreaFilled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -124,28 +134,29 @@ public class v_LAPORAN extends javax.swing.JFrame {
                                     .addComponent(lpakan)
                                     .addComponent(lvaksin)
                                     .addComponent(lvitamin))
-                                .addGap(43, 43, 43)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(umurSapi)
-                                    .addComponent(cbPakan, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(rIya)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                                        .addComponent(cbVitamin, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(rIyaV)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(cbVaksin, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(43, 43, 43)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(cbPakan, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(umurSapi)))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(rtidak)
-                                            .addComponent(rTidakV))
-                                        .addGap(0, 0, Short.MAX_VALUE))))))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(0, 0, Short.MAX_VALUE)
+                                                .addComponent(cek, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(cek2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(cbVaksin, javax.swing.GroupLayout.Alignment.TRAILING, 0, 250, Short.MAX_VALUE)
+                                            .addComponent(cbVitamin, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(81, 81, 81)
-                        .addComponent(btnHitung, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(btnHitung, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)))
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane2)
@@ -177,32 +188,25 @@ public class v_LAPORAN extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(cbPakan, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lpakan))
-                        .addGap(38, 38, 38)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGap(36, 36, 36)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE, false)
                             .addComponent(lvitamin)
-                            .addComponent(rIya)
-                            .addComponent(cbVitamin, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rtidak)
-                        .addGap(0, 6, Short.MAX_VALUE)))
+                            .addComponent(cbVitamin, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cek, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 34, Short.MAX_VALUE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(14, 14, 14)
                                 .addComponent(lvaksin))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(rIyaV)
-                                    .addComponent(cbVaksin, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(rTidakV)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                            .addComponent(cbVaksin)
+                            .addComponent(cek2, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnHitung, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jScrollPane2))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE))
                 .addGap(36, 36, 36))
         );
 
@@ -253,6 +257,8 @@ public class v_LAPORAN extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbPakan;
     private javax.swing.JComboBox<String> cbVaksin;
     private javax.swing.JComboBox<String> cbVitamin;
+    private javax.swing.JCheckBox cek;
+    private javax.swing.JCheckBox cek2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lberat;
@@ -261,12 +267,86 @@ public class v_LAPORAN extends javax.swing.JFrame {
     private javax.swing.JLabel lumur;
     private javax.swing.JLabel lvaksin;
     private javax.swing.JLabel lvitamin;
-    private javax.swing.JRadioButton rIya;
-    private javax.swing.JRadioButton rIyaV;
-    private javax.swing.JRadioButton rTidakV;
-    private javax.swing.JRadioButton rtidak;
     private javax.swing.JTextArea saran;
     private javax.swing.JTable tableSapi;
     private javax.swing.JTextField umurSapi;
     // End of variables declaration//GEN-END:variables
+
+    public JTextField getBeratSapi() {
+        return beratSapi;
+    }
+
+    public JTextArea getSaran() {
+        return saran;
+    }
+
+    public JTable getTableSapi() {
+        return tableSapi;
+    }
+
+    public JTextField getUmurSapi() {
+        return umurSapi;
+    }
+
+    public void setNomorSapi(String[] comboAngkatan) {
+        for (String a : comboAngkatan) {
+            this.cbNomor.addItem(a);
+        }
+    }
+
+    public void setMakanan(String[] comboAngkatan) {
+        for (String a : comboAngkatan) {
+            this.cbPakan.addItem(a);
+        }
+    }
+
+    public void setVitamin(String[] comboAngkatan) {
+        for (String a : comboAngkatan) {
+            this.cbVitamin.addItem(a);
+        }
+    }
+
+    public void setVaksin(String[] comboAngkatan) {
+        for (String a : comboAngkatan) {
+            this.cbVaksin.addItem(a);
+        }
+    }
+
+    public JComboBox<String> getCbNomor() {
+        return cbNomor;
+    }
+
+    public JComboBox<String> getCbPakan() {
+        return cbPakan;
+    }
+
+    public JComboBox<String> getCbVaksin() {
+        return cbVaksin;
+    }
+
+    public JComboBox<String> getCbVitamin() {
+        return cbVitamin;
+    }
+
+    public void check(ItemListener a) {
+        this.cbNomor.addItemListener(a);
+    }
+    
+    public void validasi(ItemListener a) {
+        this.cek.addItemListener(a);
+    }
+
+    public JCheckBox getCek() {
+        return cek;
+    }
+    
+    public void validasi2(ItemListener a) {
+        this.cek2.addItemListener(a);
+    }
+
+    public JCheckBox getCek2() {
+        return cek2;
+    }
+
+        
 }
