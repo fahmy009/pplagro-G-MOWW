@@ -5,6 +5,8 @@
  */
 package controllers;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.sql.SQLException;
@@ -33,11 +35,25 @@ public class c_laporan {
         views.setMakanan(model.pakan());
         views.validasi(new cek());
         views.validasi2(new cek2());
-     
+        views.btnHitung(new hitung());
+        views.btnKembali(new kembali());
+    }
+
+    private class hitung implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+        }
+    }
+
+    private class kembali implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+        }
     }
 
     private class cek2 implements ItemListener {
-
 
         @Override
         public void itemStateChanged(ItemEvent e) {

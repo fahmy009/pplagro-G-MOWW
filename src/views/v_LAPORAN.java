@@ -5,6 +5,7 @@
  */
 package views;
 
+import java.awt.event.ActionListener;
 import java.awt.event.ItemListener;
 import javax.swing.ButtonGroup;
 import javax.swing.JCheckBox;
@@ -346,6 +347,14 @@ public class v_LAPORAN extends javax.swing.JFrame {
 
     public JCheckBox getCek2() {
         return cek2;
+    }
+    
+    public void btnHitung(ActionListener a){
+        btnHitung.addActionListener(a);
+    }
+    
+    public void btnKembali(ActionListener a){
+        btnKembali.addActionListener(a);
     }
 
         
