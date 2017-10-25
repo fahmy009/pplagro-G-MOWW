@@ -61,11 +61,11 @@ public class v_KANDANG extends javax.swing.JFrame {
 
         jumlahKandang.setBorder(null);
         jumlahKandang.setOpaque(false);
-        getContentPane().add(jumlahKandang, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 120, 210, 30));
+        getContentPane().add(jumlahKandang, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 210, 30));
 
         kapasitasKandang.setBorder(null);
         kapasitasKandang.setOpaque(false);
-        getContentPane().add(kapasitasKandang, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 210, 30));
+        getContentPane().add(kapasitasKandang, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 210, 30));
 
         tableKandang.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -78,14 +78,13 @@ public class v_KANDANG extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tableKandang.setEnabled(false);
         tableKandang.setGridColor(new java.awt.Color(255, 255, 255));
         tableKandang.setOpaque(false);
         jScrollPane1.setViewportView(tableKandang);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 590, 200));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin_kandang.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/admin_kandang (2).png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
 
         pack();

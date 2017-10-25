@@ -74,7 +74,6 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
             }
         ));
         tableSapi.setToolTipText("");
-        tableSapi.setEnabled(false);
         tableSapi.setGridColor(new java.awt.Color(255, 255, 255));
         tableSapi.setOpaque(false);
         jScrollPane1.setViewportView(tableSapi);

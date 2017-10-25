@@ -62,7 +62,7 @@ public class m_kandang extends modelInheritance {
 
     @Override
     public boolean save(String query) throws SQLException {
-        String queries = "INSERT INTO kandang (id_kandang, nomor_kandang, kapasitas_kandang) VALUES (NULL, " + query + ")";
+        String queries = "INSERT INTO kandang (id_kandang, kapasitas_kandang) VALUES (" + query + ")";
         return super.save(queries); //To change body of generated methods, choose Tools | Templates.
     }
 }

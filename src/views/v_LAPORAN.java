@@ -79,7 +79,6 @@ public class v_LAPORAN extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tableSapi.setEnabled(false);
         tableSapi.setGridColor(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(tableSapi);
 

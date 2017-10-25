@@ -75,7 +75,6 @@ public class v_MAKANAN extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tableMakanan.setEnabled(false);
         tableMakanan.setGridColor(new java.awt.Color(255, 255, 255));
         tableMakanan.setOpaque(false);
         jScrollPane1.setViewportView(tableMakanan);

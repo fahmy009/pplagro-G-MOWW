@@ -91,7 +91,6 @@ public class v_PENGHITUNG extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tableSapi.setEnabled(false);
         tableSapi.setGridColor(new java.awt.Color(255, 255, 255));
         tableSapi.setOpaque(false);
         jScrollPane1.setViewportView(tableSapi);

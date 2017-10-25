@@ -72,9 +72,7 @@ public class c_sapi {
                 JOptionPane.showMessageDialog(view, "Silahkan Dicek dan Diisi Kembali");
             } else {
                 try {
-                    model.save("NULL,NULL," + view.getUmurSapi().getText() + ",NULL,NULL,NULL,NULL,NULL," + view.getCbKandang().getSelectedItem());
-//                String coba = model.coba("1");
-//                model.save2("NULL," + coba + ",NULL");5
+                    model.save("NULL,NULL," + view.getUmurSapi().getText() + ",NULL,NULL,NULL,NULL,NULL," + view.getCbKandang().getSelectedItem() + "," + view.getCbJenisSapi().getSelectedIndex());
                     view.hapus();
                     view.getTableSapi().setModel(model.getTable());
                 } catch (SQLException ex) {

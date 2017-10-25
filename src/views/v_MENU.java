@@ -43,8 +43,8 @@ public class v_MENU extends javax.swing.JFrame {
         btnLogin.setContentAreaFilled(false);
         getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 385, 80, 30));
 
-        menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/selamat datang.png"))); // NOI18N
-        getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
+        menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/selamat datang2.png"))); // NOI18N
+        getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

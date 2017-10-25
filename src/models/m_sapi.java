@@ -52,14 +52,14 @@ public class m_sapi extends modelInheritance {
     }
 
     public DefaultTableModel getTable() throws SQLException {
-        String header[] = {"Nomor Sapi", "Berat Sapi", "Umur Sapi", "Nomor Kandang"};
+        String header[] = {"Nomor Sapi","Jenis Sapi", "Berat Sapi", "Umur Sapi", "Nomor Kandang"};
         DefaultTableModel tabelModel = new DefaultTableModel(null, header);
-        ResultSet rs = kon.getResult("SELECT s.id_sapi, s.berat_sapi, s.umur_sapi, k.nomor_kandang FROM sapi s join kandang k on s.id_kandang=k.id_kandang");
+        ResultSet rs = kon.getResult("SELECT s.id_sapi, j.jenis_sapi, s.berat_sapi, s.umur_sapi, k.nomor_kandang FROM sapi s join kandang k on s.id_kandang=k.id_kandang join jenis_sapi j on s.id_jenis_sapi = j.id_jenis_sapi");
         for (int i = tabelModel.getRowCount() - 1; i >= 0; i--) {
             tabelModel.removeRow(i);
         }
         while (rs.next()) {
-            String kolom[] = new String[4];
+            String kolom[] = new String[5];
             for (int i = 0; i < kolom.length; i++) {
                 kolom[i] = rs.getString(i + 1);
             }

@@ -55,8 +55,8 @@ public class v_VALIDASI extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tabelValidasi.setEnabled(false);
         tabelValidasi.setGridColor(new java.awt.Color(255, 255, 255));
+        tabelValidasi.setOpaque(false);
         jScrollPane1.setViewportView(tabelValidasi);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 420, 340));
