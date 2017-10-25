@@ -51,20 +51,20 @@ public class v_PENGHITUNG extends javax.swing.JFrame {
         hasilHitungan.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         hasilHitungan.setEnabled(false);
         hasilHitungan.setOpaque(false);
-        getContentPane().add(hasilHitungan, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, 170, 30));
+        getContentPane().add(hasilHitungan, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 170, 30));
 
         kg1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         kg1.setText("KG");
-        getContentPane().add(kg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 160, 30, 50));
+        getContentPane().add(kg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 180, 30, 50));
 
         kg.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         kg.setText("CM");
-        getContentPane().add(kg, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 30, 50));
+        getContentPane().add(kg, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, 30, 50));
 
         lingkarDada.setBorder(null);
         lingkarDada.setInheritsPopupMenu(true);
         lingkarDada.setOpaque(false);
-        getContentPane().add(lingkarDada, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 170, 30));
+        getContentPane().add(lingkarDada, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 170, 30));
 
         btnUpdate.setBorder(null);
         btnUpdate.setBorderPainted(false);
@@ -77,7 +77,7 @@ public class v_PENGHITUNG extends javax.swing.JFrame {
         getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 440, 100, 30));
 
         nomorSapi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
-        getContentPane().add(nomorSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 220, 30));
+        getContentPane().add(nomorSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 230, 50));
 
         tableSapi.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -95,9 +95,9 @@ public class v_PENGHITUNG extends javax.swing.JFrame {
         tableSapi.setOpaque(false);
         jScrollPane1.setViewportView(tableSapi);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 590, 200));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 590, 200));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/peternak_ngukur berat.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/peternak_ukur berat.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
 
         pack();

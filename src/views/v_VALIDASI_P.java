@@ -61,7 +61,7 @@ public class v_VALIDASI_P extends javax.swing.JFrame {
         btnKembali.setContentAreaFilled(false);
         getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 440, 100, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/validasi.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/peternak.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
 
         pack();

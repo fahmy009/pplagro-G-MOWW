@@ -38,8 +38,10 @@ public class v_PETERNAK extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnValidasi.setText("VALIDASI");
-        getContentPane().add(btnValidasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 90, 112));
+        btnValidasi.setBorder(null);
+        btnValidasi.setBorderPainted(false);
+        btnValidasi.setContentAreaFilled(false);
+        getContentPane().add(btnValidasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 90, 90));
 
         btnPertumbuhan.setBorder(null);
         btnPertumbuhan.setBorderPainted(false);
@@ -56,7 +58,7 @@ public class v_PETERNAK extends javax.swing.JFrame {
         btnPenghitung.setContentAreaFilled(false);
         getContentPane().add(btnPenghitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 90, 90));
 
-        peternak.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/peterna_tampilan awal.png"))); // NOI18N
+        peternak.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/menu awal peternak.png"))); // NOI18N
         getContentPane().add(peternak, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
 
         pack();
