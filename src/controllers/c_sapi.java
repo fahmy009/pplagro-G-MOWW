@@ -29,6 +29,7 @@ public class c_sapi {
         this.view = view;
         this.model = model;
         view.setComboKandang(model.kandang());
+        view.setComboJenis(model.nomorJenis());
         view.btnHapus(new btnHapus());
         view.btnKembali(new btnKembali());
         view.btnTambah(new btnTambah());

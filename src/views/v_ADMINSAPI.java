@@ -40,6 +40,7 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
         tableSapi = new javax.swing.JTable();
         umurSapi = new javax.swing.JTextField();
         cbKandang = new javax.swing.JComboBox<>();
+        cbJenisSapi = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -78,17 +79,21 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
         tableSapi.setOpaque(false);
         jScrollPane1.setViewportView(tableSapi);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 590, 200));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 590, 200));
 
         umurSapi.setBorder(null);
         umurSapi.setOpaque(false);
-        getContentPane().add(umurSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 210, 30));
+        getContentPane().add(umurSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 210, 30));
 
         cbKandang.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbKandang.setBorder(null);
-        getContentPane().add(cbKandang, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 210, 30));
+        getContentPane().add(cbKandang, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, 210, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin_ sapi.png"))); // NOI18N
+        cbJenisSapi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
+        cbJenisSapi.setBorder(null);
+        getContentPane().add(cbJenisSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 210, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/jenis sapi.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
 
         pack();
@@ -133,6 +138,7 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
     private javax.swing.JButton btnHapusSapi;
     private javax.swing.JButton btnKembali;
     private javax.swing.JToggleButton btnTambahSapi;
+    private javax.swing.JComboBox<String> cbJenisSapi;
     private javax.swing.JComboBox<String> cbKandang;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
@@ -170,9 +176,19 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
             this.cbKandang.addItem(a);
         }
     }
+    
+    public void setComboJenis(String[] comboAngkatan) {
+        for (String a : comboAngkatan) {
+            this.cbJenisSapi.addItem(a);
+        }
+    }
 
     public JComboBox<String> getCbKandang() {
         return cbKandang;
+    }
+
+    public JComboBox<String> getCbJenisSapi() {
+        return cbJenisSapi;
     }
     
 }

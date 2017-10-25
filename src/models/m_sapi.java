@@ -84,6 +84,21 @@ public class m_sapi extends modelInheritance {
         return tahun;
     }
 
+    public String[] nomorJenis() throws SQLException {
+        String query = "SELECT * FROM jenis_sapi";
+        ResultSet rs = kon.getResult(query);
+        rs.last();
+        String tahun[] = new String[rs.getRow()];
+        rs.beforeFirst();
+        int a = 0;
+        while (rs.next()) {
+            tahun[a] = rs.getString("jenis_sapi");
+            a++;
+        }
+        a = 0;
+        return tahun;
+    }
+
     public String coba(String id) throws SQLException {
         String query = "SELECT * FROM sapi WHERE id_sapi=" + id;
         ResultSet rs = kon.getResult(query);
