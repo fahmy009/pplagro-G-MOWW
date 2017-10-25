@@ -19,6 +19,7 @@ public class v_VALIDASI_P extends javax.swing.JFrame {
      */
     public v_VALIDASI_P() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /**

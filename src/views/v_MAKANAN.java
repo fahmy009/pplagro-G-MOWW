@@ -21,6 +21,7 @@ public class v_MAKANAN extends javax.swing.JFrame {
      */
     public v_MAKANAN() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /**

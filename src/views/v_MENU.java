@@ -20,6 +20,7 @@ public class v_MENU extends javax.swing.JFrame {
     
     public v_MENU() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /**

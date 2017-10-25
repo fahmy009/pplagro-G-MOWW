@@ -21,6 +21,7 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
      */
     public v_ADMINSAPI() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /**

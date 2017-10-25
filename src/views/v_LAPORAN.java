@@ -26,6 +26,7 @@ public class v_LAPORAN extends javax.swing.JFrame {
      */
     public v_LAPORAN() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /**
@@ -111,8 +112,10 @@ public class v_LAPORAN extends javax.swing.JFrame {
         cbVaksin.setEnabled(false);
         getContentPane().add(cbVaksin, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 210, 40));
 
+        btnHitung.setBorder(null);
+        btnHitung.setBorderPainted(false);
         btnHitung.setContentAreaFilled(false);
-        getContentPane().add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 160, 40));
+        getContentPane().add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 170, 50));
 
         cek.setBorder(null);
         cek.setContentAreaFilled(false);

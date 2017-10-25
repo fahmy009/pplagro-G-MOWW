@@ -20,6 +20,7 @@ public class v_ADMIN extends javax.swing.JFrame {
      */
     public v_ADMIN() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
 

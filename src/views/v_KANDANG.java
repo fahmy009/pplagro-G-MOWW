@@ -20,6 +20,7 @@ public class v_KANDANG extends javax.swing.JFrame {
      */
     public v_KANDANG() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /**

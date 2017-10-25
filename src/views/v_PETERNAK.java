@@ -18,6 +18,7 @@ public class v_PETERNAK extends javax.swing.JFrame {
      */
     public v_PETERNAK() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /**

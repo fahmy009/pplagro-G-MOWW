@@ -22,6 +22,7 @@ public class v_PENGHITUNG extends javax.swing.JFrame {
      */
     public v_PENGHITUNG() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /**

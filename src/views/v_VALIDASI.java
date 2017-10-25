@@ -20,6 +20,7 @@ public class v_VALIDASI extends javax.swing.JFrame {
      */
     public v_VALIDASI() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /**

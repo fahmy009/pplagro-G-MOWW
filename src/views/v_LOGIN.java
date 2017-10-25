@@ -23,6 +23,7 @@ public class v_LOGIN extends javax.swing.JFrame {
     
     public v_LOGIN() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /**
@@ -47,7 +48,7 @@ public class v_LOGIN extends javax.swing.JFrame {
 
         username.setBorder(null);
         username.setOpaque(false);
-        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 170, 37));
+        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 207, 170, 40));
 
         password.setBorder(null);
         password.setOpaque(false);
@@ -58,8 +59,8 @@ public class v_LOGIN extends javax.swing.JFrame {
         btnLogin.setContentAreaFilled(false);
         getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 340, 60));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/login (2).png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/login.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
