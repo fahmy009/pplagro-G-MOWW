@@ -40,7 +40,7 @@ public class c_kandang {
         public void actionPerformed(ActionEvent e) {
             try {
                 if (view.getTableKandang().getSelectedRow() == -1) {
-                    JOptionPane.showMessageDialog(view, "Silahkan PIlih Data yang akan dihapus");
+                    JOptionPane.showMessageDialog(view, "Silahkan Pilih Data yang akan dihapus");
                 } else {
                     model.delete((String) view.getTableKandang().getValueAt(view.getTableKandang().getSelectedRow(), 0));
                     view.getTableKandang().setModel(model.getTable());
@@ -67,6 +67,8 @@ public class c_kandang {
             try {
                 model.save("'" + view.getJumlahKandang().getText() + "','" + view.getKapasitasKandang().getText() + "'");
                 view.getTableKandang().setModel(model.getTable());
+                view.getJumlahKandang().setText("");
+                view.getKapasitasKandang().setText("");
             } catch (SQLException ex) {
                 Logger.getLogger(c_kandang.class.getName()).log(Level.SEVERE, null, ex);
             }

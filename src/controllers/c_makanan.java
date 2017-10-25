@@ -51,6 +51,8 @@ public class c_makanan {
             try {
                 model.save("NULL," + view.getCbJjenisMakanan().getSelectedIndex() + "," + view.getCbMakanan().getSelectedIndex());
                 view.getTableMakanan().setModel(model.getTable());
+                view.getCbJjenisMakanan().setSelectedIndex(0);
+                view.getCbMakanan().setSelectedIndex(0);
             } catch (SQLException ex) {
                 Logger.getLogger(c_makanan.class.getName()).log(Level.SEVERE, null, ex);
             }

@@ -73,8 +73,8 @@ public class c_sapi {
             } else {
                 try {
                     model.save("NULL,NULL," + view.getUmurSapi().getText() + ",NULL,NULL,NULL,NULL,NULL," + view.getCbKandang().getSelectedItem() + "," + view.getCbJenisSapi().getSelectedIndex());
-                    view.hapus();
                     view.getTableSapi().setModel(model.getTable());
+                    view.hapus();
                 } catch (SQLException ex) {
                     Logger.getLogger(c_sapi.class.getName()).log(Level.SEVERE, null, ex);
                 }

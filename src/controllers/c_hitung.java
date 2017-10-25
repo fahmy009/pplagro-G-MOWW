@@ -47,6 +47,9 @@ public class c_hitung {
             try {
                 model.update(Double.toString(hasil), (String) view.getNomorSapi().getSelectedItem());
                 view.getTableSapi().setModel(model.getTable());
+                view.getNomorSapi().setSelectedIndex(0);
+                view.getLingkarDada().setText("");
+                view.getHasilHitungan().setText("");
             } catch (SQLException ex) {
                 Logger.getLogger(c_hitung.class.getName()).log(Level.SEVERE, null, ex);
             }
