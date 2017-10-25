@@ -46,23 +46,22 @@ public class v_MAKANAN extends javax.swing.JFrame {
 
         cbJjenisMakanan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbJjenisMakanan.setBorder(null);
-        cbJjenisMakanan.setOpaque(false);
-        getContentPane().add(cbJjenisMakanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 200, 30));
+        getContentPane().add(cbJjenisMakanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, 210, 30));
 
         btnTambah.setBorder(null);
         btnTambah.setBorderPainted(false);
         btnTambah.setContentAreaFilled(false);
-        getContentPane().add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 130, 50));
+        getContentPane().add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, 90, 40));
 
         btnHapus.setBorder(null);
         btnHapus.setBorderPainted(false);
         btnHapus.setContentAreaFilled(false);
-        getContentPane().add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, 126, 50));
+        getContentPane().add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, 90, 40));
 
         btnKembali.setBorder(null);
         btnKembali.setBorderPainted(false);
         btnKembali.setContentAreaFilled(false);
-        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 810, 126, 40));
+        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(686, 440, 90, 30));
 
         tableMakanan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -76,17 +75,18 @@ public class v_MAKANAN extends javax.swing.JFrame {
             }
         ));
         tableMakanan.setEnabled(false);
+        tableMakanan.setGridColor(new java.awt.Color(255, 255, 255));
+        tableMakanan.setOpaque(false);
         jScrollPane1.setViewportView(tableMakanan);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 420, 400));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 590, 200));
 
         cbMakanan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbMakanan.setBorder(null);
-        cbMakanan.setOpaque(false);
-        getContentPane().add(cbMakanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 200, 30));
+        getContentPane().add(cbMakanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, 210, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MAKANAN.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 870));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin_makanan.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

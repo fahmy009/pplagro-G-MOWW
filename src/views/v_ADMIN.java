@@ -32,13 +32,19 @@ public class v_ADMIN extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        admin = new javax.swing.JLabel();
         btnMakanan = new javax.swing.JButton();
         btnKandang = new javax.swing.JButton();
         btnLaporan = new javax.swing.JButton();
-        admin = new javax.swing.JLabel();
         btnLogout = new javax.swing.JButton();
         btnSapi = new javax.swing.JButton();
+        btnProfile = new javax.swing.JButton();
         gambar = new javax.swing.JLabel();
+
+        admin.setFont(new java.awt.Font("Tall & Lean", 0, 36)); // NOI18N
+        admin.setForeground(new java.awt.Color(204, 204, 204));
+        admin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        admin.setText("ADMIN");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -46,34 +52,34 @@ public class v_ADMIN extends javax.swing.JFrame {
         btnMakanan.setBorder(null);
         btnMakanan.setBorderPainted(false);
         btnMakanan.setContentAreaFilled(false);
-        getContentPane().add(btnMakanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 470, 110, 130));
+        getContentPane().add(btnMakanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 70, 90));
 
         btnKandang.setBorder(null);
         btnKandang.setBorderPainted(false);
         btnKandang.setContentAreaFilled(false);
-        getContentPane().add(btnKandang, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 150, 150));
+        getContentPane().add(btnKandang, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 90, 80));
 
         btnLaporan.setBorder(null);
         btnLaporan.setBorderPainted(false);
         btnLaporan.setContentAreaFilled(false);
-        getContentPane().add(btnLaporan, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 190, 130));
+        getContentPane().add(btnLaporan, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 110, 80));
 
-        admin.setFont(new java.awt.Font("Tall & Lean", 0, 36)); // NOI18N
-        admin.setForeground(new java.awt.Color(204, 204, 204));
-        admin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        admin.setText("ADMIN");
-        getContentPane().add(admin, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 137, 45));
-
-        btnLogout.setText("LOGOUT");
-        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 80, 41));
+        btnLogout.setBorder(null);
+        btnLogout.setContentAreaFilled(false);
+        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, 50, 40));
 
         btnSapi.setBorder(null);
         btnSapi.setBorderPainted(false);
         btnSapi.setContentAreaFilled(false);
-        getContentPane().add(btnSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 130, 140));
+        getContentPane().add(btnSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 70, 80));
 
-        gambar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/MENU.png"))); // NOI18N
-        getContentPane().add(gambar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 870));
+        btnProfile.setBorder(null);
+        btnProfile.setBorderPainted(false);
+        btnProfile.setContentAreaFilled(false);
+        getContentPane().add(btnProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 70, 70));
+
+        gambar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin_tampilan awal.png"))); // NOI18N
+        getContentPane().add(gambar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -119,6 +125,7 @@ public class v_ADMIN extends javax.swing.JFrame {
     private javax.swing.JButton btnLaporan;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnMakanan;
+    private javax.swing.JButton btnProfile;
     private javax.swing.JButton btnSapi;
     private javax.swing.JLabel gambar;
     // End of variables declaration//GEN-END:variables
@@ -141,6 +148,10 @@ public class v_ADMIN extends javax.swing.JFrame {
     
     public void getBtnSapi(ActionListener a) {
         btnSapi.addActionListener(a);
+    }
+    
+    public void getBtnProfile(ActionListener a) {
+        btnProfile.addActionListener(a);
     }
 
 }

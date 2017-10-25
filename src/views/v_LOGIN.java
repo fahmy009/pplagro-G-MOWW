@@ -35,9 +35,9 @@ public class v_LOGIN extends javax.swing.JFrame {
     private void initComponents() {
 
         btnKembali = new javax.swing.JButton();
-        btnLogin = new javax.swing.JButton();
         username = new javax.swing.JTextField();
         password = new javax.swing.JPasswordField();
+        btnLogin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         btnKembali.setText("KEMBALI");
@@ -45,21 +45,21 @@ public class v_LOGIN extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnLogin.setBorder(null);
-        btnLogin.setBorderPainted(false);
-        btnLogin.setContentAreaFilled(false);
-        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, 270, 40));
-
         username.setBorder(null);
         username.setOpaque(false);
-        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 250, 37));
+        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 170, 37));
 
         password.setBorder(null);
         password.setOpaque(false);
-        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 250, 40));
+        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 280, 170, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/LOGIN.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -150, 500, 870));
+        btnLogin.setBorder(null);
+        btnLogin.setBorderPainted(false);
+        btnLogin.setContentAreaFilled(false);
+        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 340, 60));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/login (2).png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

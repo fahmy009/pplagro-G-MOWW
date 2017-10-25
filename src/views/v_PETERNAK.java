@@ -31,56 +31,33 @@ public class v_PETERNAK extends javax.swing.JFrame {
 
         btnValidasi = new javax.swing.JButton();
         btnPertumbuhan = new javax.swing.JButton();
-        peternak = new javax.swing.JLabel();
         btnLogout = new javax.swing.JButton();
         btnPenghitung = new javax.swing.JButton();
+        peternak = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnValidasi.setText("VALIDASI");
+        getContentPane().add(btnValidasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 90, 112));
 
-        btnPertumbuhan.setText("PERTUMBUHAN SAPI");
+        btnPertumbuhan.setBorder(null);
+        btnPertumbuhan.setBorderPainted(false);
+        btnPertumbuhan.setContentAreaFilled(false);
+        getContentPane().add(btnPertumbuhan, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 100, 130));
 
-        peternak.setText("PETERNAK");
+        btnLogout.setBorder(null);
+        btnLogout.setBorderPainted(false);
+        btnLogout.setContentAreaFilled(false);
+        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, 50, 40));
 
-        btnLogout.setText("LOGOUT");
+        btnPenghitung.setBorder(null);
+        btnPenghitung.setBorderPainted(false);
+        btnPenghitung.setContentAreaFilled(false);
+        getContentPane().add(btnPenghitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 90, 90));
 
-        btnPenghitung.setText("PENGHITUNG BERAT SAPI");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnPertumbuhan, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)
-                    .addComponent(btnValidasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(82, 82, 82)
-                .addComponent(btnPenghitung, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(206, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(peternak, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(peternak, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnPenghitung, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnValidasi, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(btnPertumbuhan, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45))
-        );
+        peternak.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/peterna_tampilan awal.png"))); // NOI18N
+        getContentPane().add(peternak, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

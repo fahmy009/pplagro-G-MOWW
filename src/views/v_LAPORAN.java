@@ -40,27 +40,31 @@ public class v_LAPORAN extends javax.swing.JFrame {
         btnKembali = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableSapi = new javax.swing.JTable();
-        lnomor = new javax.swing.JLabel();
-        lberat = new javax.swing.JLabel();
         beratSapi = new javax.swing.JTextField();
         cbNomor = new javax.swing.JComboBox<>();
-        lumur = new javax.swing.JLabel();
         umurSapi = new javax.swing.JTextField();
         cbPakan = new javax.swing.JComboBox<>();
         jScrollPane2 = new javax.swing.JScrollPane();
         saran = new javax.swing.JTextArea();
-        lpakan = new javax.swing.JLabel();
-        lvaksin = new javax.swing.JLabel();
-        lvitamin = new javax.swing.JLabel();
         cbVitamin = new javax.swing.JComboBox<>();
         cbVaksin = new javax.swing.JComboBox<>();
         btnHitung = new javax.swing.JButton();
         cek = new javax.swing.JCheckBox();
         cek2 = new javax.swing.JCheckBox();
+        lnomor = new javax.swing.JLabel();
+        lberat = new javax.swing.JLabel();
+        lumur = new javax.swing.JLabel();
+        lpakan = new javax.swing.JLabel();
+        lvaksin = new javax.swing.JLabel();
+        lvitamin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnKembali.setText("KEMBALI");
+        btnKembali.setBorder(null);
+        btnKembali.setBorderPainted(false);
+        btnKembali.setContentAreaFilled(false);
+        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 100, 30));
 
         tableSapi.setForeground(new java.awt.Color(255, 255, 255));
         tableSapi.setModel(new javax.swing.table.DefaultTableModel(
@@ -78,138 +82,64 @@ public class v_LAPORAN extends javax.swing.JFrame {
         tableSapi.setGridColor(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(tableSapi);
 
-        lnomor.setText("NOMOR SAPI");
-
-        lberat.setText("BERAT SAPI");
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 370, 190));
 
         beratSapi.setEnabled(false);
+        getContentPane().add(beratSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 210, 33));
 
         cbNomor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
-
-        lumur.setText("UMUR SAPI");
+        getContentPane().add(cbNomor, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 210, 35));
 
         umurSapi.setEnabled(false);
+        getContentPane().add(umurSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 210, 35));
 
         cbPakan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
+        getContentPane().add(cbPakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 210, 39));
 
         saran.setEditable(false);
         saran.setColumns(20);
         saran.setRows(5);
         jScrollPane2.setViewportView(saran);
 
-        lpakan.setText("PAKAN");
-
-        lvaksin.setText("VAKSIN");
-
-        lvitamin.setText("VITAMIN");
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, 370, 130));
 
         cbVitamin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbVitamin.setEnabled(false);
+        getContentPane().add(cbVitamin, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 210, 39));
 
         cbVaksin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbVaksin.setEnabled(false);
+        getContentPane().add(cbVaksin, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 210, 40));
 
-        btnHitung.setText("HITUNG & UPDATE");
         btnHitung.setContentAreaFilled(false);
+        getContentPane().add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 160, 40));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lberat)
-                                    .addComponent(lnomor))
-                                .addGap(34, 34, 34)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(beratSapi)
-                                    .addComponent(cbNomor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lumur)
-                                    .addComponent(lpakan)
-                                    .addComponent(lvaksin)
-                                    .addComponent(lvitamin))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(43, 43, 43)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(cbPakan, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(umurSapi)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(0, 0, Short.MAX_VALUE)
-                                                .addComponent(cek, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(cek2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(cbVaksin, javax.swing.GroupLayout.Alignment.TRAILING, 0, 250, Short.MAX_VALUE)
-                                            .addComponent(cbVitamin, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(81, 81, 81)
-                        .addComponent(btnHitung, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)))
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane2)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE))
-                .addGap(30, 30, 30))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addGap(18, 18, 18))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lnomor)
-                            .addComponent(cbNomor, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lberat)
-                            .addComponent(beratSapi, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lumur)
-                            .addComponent(umurSapi, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cbPakan, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lpakan))
-                        .addGap(36, 36, 36)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE, false)
-                            .addComponent(lvitamin)
-                            .addComponent(cbVitamin, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cek, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 34, Short.MAX_VALUE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addComponent(lvaksin))
-                            .addComponent(cbVaksin)
-                            .addComponent(cek2, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnHitung, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE))
-                .addGap(36, 36, 36))
-        );
+        cek.setBorder(null);
+        cek.setContentAreaFilled(false);
+        getContentPane().add(cek, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 20, 39));
+
+        cek2.setBorder(null);
+        cek2.setContentAreaFilled(false);
+        getContentPane().add(cek2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 340, 20, 44));
+
+        lnomor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/peternak_sppk.png"))); // NOI18N
+        lnomor.setText("NOMOR SAPI");
+        getContentPane().add(lnomor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
+
+        lberat.setText("BERAT SAPI");
+        getContentPane().add(lberat, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 86, -1, -1));
+
+        lumur.setText("UMUR SAPI");
+        getContentPane().add(lumur, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 144, -1, -1));
+
+        lpakan.setText("PAKAN");
+        getContentPane().add(lpakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 199, -1, -1));
+
+        lvaksin.setText("VAKSIN");
+        getContentPane().add(lvaksin, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 349, -1, -1));
+
+        lvitamin.setText("VITAMIN");
+        getContentPane().add(lvitamin, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 274, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

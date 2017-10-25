@@ -56,6 +56,13 @@ public class c_peternak {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            try {
+                c_laporan a = new c_laporan(new v_LAPORAN(), new m_sapi());
+                view.dispose();
+            } catch (SQLException ex) {
+                Logger.getLogger(c_peternak.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
         }
 
     }

@@ -32,9 +32,9 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnKembali = new javax.swing.JButton();
         btnTambahSapi = new javax.swing.JToggleButton();
         btnHapusSapi = new javax.swing.JButton();
-        btnKembali = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableSapi = new javax.swing.JTable();
         umurSapi = new javax.swing.JTextField();
@@ -42,24 +42,23 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(830, 520));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnTambahSapi.setBorder(null);
-        btnTambahSapi.setBorderPainted(false);
-        btnTambahSapi.setContentAreaFilled(false);
-        getContentPane().add(btnTambahSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 120, 50));
-
-        btnHapusSapi.setBorder(null);
-        btnHapusSapi.setBorderPainted(false);
-        btnHapusSapi.setContentAreaFilled(false);
-        btnHapusSapi.setOpaque(false);
-        getContentPane().add(btnHapusSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, 120, 40));
 
         btnKembali.setBorder(null);
         btnKembali.setBorderPainted(false);
         btnKembali.setContentAreaFilled(false);
-        btnKembali.setOpaque(false);
-        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 810, 130, 40));
+        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 440, 100, 30));
+
+        btnTambahSapi.setBorder(null);
+        btnTambahSapi.setBorderPainted(false);
+        btnTambahSapi.setContentAreaFilled(false);
+        getContentPane().add(btnTambahSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, 100, 40));
+
+        btnHapusSapi.setBorder(null);
+        btnHapusSapi.setBorderPainted(false);
+        btnHapusSapi.setContentAreaFilled(false);
+        getContentPane().add(btnHapusSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, 100, 40));
 
         tableSapi.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -74,19 +73,22 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
         ));
         tableSapi.setToolTipText("");
         tableSapi.setEnabled(false);
+        tableSapi.setGridColor(new java.awt.Color(255, 255, 255));
+        tableSapi.setOpaque(false);
         jScrollPane1.setViewportView(tableSapi);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 420, 400));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 590, 200));
 
         umurSapi.setBorder(null);
         umurSapi.setOpaque(false);
-        getContentPane().add(umurSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 210, 30));
+        getContentPane().add(umurSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 210, 30));
 
         cbKandang.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
-        getContentPane().add(cbKandang, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 210, 30));
+        cbKandang.setBorder(null);
+        getContentPane().add(cbKandang, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 210, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/SAPI.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 870));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin_ sapi.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

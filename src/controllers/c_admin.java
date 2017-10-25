@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import models.m_kandang;
 import models.m_makanan;
 import models.m_sapi;
@@ -39,6 +40,16 @@ public class c_admin {
         view.getBtnMakanan(new btnMakanan());
         view.getBtnLogout(new btnLogout());
         view.getBtnSapi(new btnSapi());
+        view.getBtnProfile(new btnProfile());
+    }
+
+    private class btnProfile implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JOptionPane.showMessageDialog(view, "masih dalam perbaikan");
+        }
+
     }
 
     private class btnSapi implements ActionListener {
