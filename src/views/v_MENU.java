@@ -32,16 +32,22 @@ public class v_MENU extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnKeluar = new javax.swing.JButton();
         btnLogin = new javax.swing.JButton();
         menu = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnKeluar.setBorder(null);
+        btnKeluar.setBorderPainted(false);
+        btnKeluar.setContentAreaFilled(false);
+        getContentPane().add(btnKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 100, 40));
+
         btnLogin.setBorder(null);
         btnLogin.setBorderPainted(false);
         btnLogin.setContentAreaFilled(false);
-        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 385, 80, 30));
+        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, 100, 40));
 
         menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/selamat datang2.png"))); // NOI18N
         getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 500));
@@ -85,11 +91,16 @@ public class v_MENU extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnKeluar;
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel menu;
     // End of variables declaration//GEN-END:variables
     
     public void getBtnLogin(ActionListener a){
         btnLogin.addActionListener(a);
+    }
+    
+    public void getBtnKeluar(ActionListener a){
+        btnKeluar.addActionListener(a);
     }
 }

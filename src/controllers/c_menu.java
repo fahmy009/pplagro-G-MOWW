@@ -26,6 +26,17 @@ public class c_menu {
         this.view = view;
         view.setVisible(true);
         view.getBtnLogin(new btnLogin());
+        view.getBtnKeluar(new btnKeluar());
+    }
+
+    private class btnKeluar implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            System.exit(0);
+        }
+
+        
     }
 
     private class btnLogin implements ActionListener {

@@ -84,12 +84,14 @@ public class v_LAPORAN extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 370, 190));
 
+        beratSapi.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         beratSapi.setEnabled(false);
         getContentPane().add(beratSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 210, 33));
 
         cbNomor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         getContentPane().add(cbNomor, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 210, 35));
 
+        umurSapi.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         umurSapi.setEnabled(false);
         getContentPane().add(umurSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 210, 35));
 
