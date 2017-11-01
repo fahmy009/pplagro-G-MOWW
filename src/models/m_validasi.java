@@ -29,14 +29,14 @@ public class m_validasi extends modelInheritance{
     }
     
      public DefaultTableModel getTable() throws SQLException {
-        String header[] = {"Id Kandang", "Nomor Kandang", "Kapasitas Kandang"};
+        String header[] = {"Nomor Kandang", "Kapasitas Kandang"};
         DefaultTableModel tabelModel = new DefaultTableModel(null, header);
         ResultSet rs = kon.getResult("SELECT * from kandang");
         for (int i = tabelModel.getRowCount() - 1; i >= 0; i--) {
             tabelModel.removeRow(i);
         }
         while (rs.next()) {
-            String kolom[] = new String[3];
+            String kolom[] = new String[2];
             for (int i = 0; i < kolom.length; i++) {
                 kolom[i] = rs.getString(i + 1);
             }
