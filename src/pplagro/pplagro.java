@@ -17,8 +17,8 @@ import views.*;
 public class pplagro {
 
     public static void main(String[] args) throws SQLException {
-        c_user a = new c_user(new v_LOGIN(), new m_user());
-//        c_menu a = new c_menu(new v_MENU());
+//        c_user a = new c_user(new v_LOGIN(), new m_user());
+        c_menu a = new c_menu(new v_MENU());
 //        c_hitung a = new c_hitung(new v_PENGHITUNG(), new m_sapi());
 //        c_makanan a = new c_makanan(new v_MAKANAN(), new m_makanan());
 //        c_kandang a = new c_kandang(new v_KANDANG(), new m_kandang());
