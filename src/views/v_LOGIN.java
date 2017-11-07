@@ -44,6 +44,7 @@ public class v_LOGIN extends javax.swing.JFrame {
         btnKembali.setText("KEMBALI");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         username.setBorder(null);

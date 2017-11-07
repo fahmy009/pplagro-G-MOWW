@@ -43,6 +43,7 @@ public class v_MAKANAN extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cbJjenisMakanan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));

@@ -13,8 +13,8 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Muhammad Fahmy
  */
-public class m_validasi extends modelInheritance{
-    
+public class m_validasi extends modelInheritance {
+
     koneksi kon;
 
     public m_validasi() throws SQLException {
@@ -22,21 +22,20 @@ public class m_validasi extends modelInheritance{
         kon = new koneksi("root", "", "pplagro");
     }
 
-    @Override
-    public boolean update(String query) throws SQLException {
-        String queries = "UPDATE ";
+    public boolean update(String id_valid, String id_sapi) throws SQLException {
+        String queries = "UPDATE sapi SET id_validasi=" + id_valid + " where id_sapi=" + id_sapi;
         return super.update(queries); //To change body of generated methods, choose Tools | Templates.
     }
-    
-     public DefaultTableModel getTable() throws SQLException {
-        String header[] = {"Nomor Kandang", "Kapasitas Kandang"};
+
+    public DefaultTableModel getTable() throws SQLException {
+        String header[] = {"Nomor Sapi", "Validasi", "Saran"};
         DefaultTableModel tabelModel = new DefaultTableModel(null, header);
-        ResultSet rs = kon.getResult("SELECT * from kandang");
+        ResultSet rs = kon.getResult("SELECT s.id_sapi, v.validasi, sr.saran from sapi s join validasi v on s.id_validasi=v.id_validasi join saran sr on s.id_saran=sr.id_saran");
         for (int i = tabelModel.getRowCount() - 1; i >= 0; i--) {
             tabelModel.removeRow(i);
         }
         while (rs.next()) {
-            String kolom[] = new String[2];
+            String kolom[] = new String[3];
             for (int i = 0; i < kolom.length; i++) {
                 kolom[i] = rs.getString(i + 1);
             }
@@ -45,5 +44,5 @@ public class m_validasi extends modelInheritance{
         }
         return tabelModel;
     }
-    
+
 }

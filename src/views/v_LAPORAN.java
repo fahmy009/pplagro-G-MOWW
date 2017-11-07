@@ -60,6 +60,7 @@ public class v_LAPORAN extends javax.swing.JFrame {
         lvitamin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnKembali.setBorder(null);

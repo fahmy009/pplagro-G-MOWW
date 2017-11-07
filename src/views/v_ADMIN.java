@@ -21,6 +21,7 @@ public class v_ADMIN extends javax.swing.JFrame {
     public v_ADMIN() {
         initComponents();
         this.setLocationRelativeTo(this);
+        
     }
 
 
@@ -48,6 +49,7 @@ public class v_ADMIN extends javax.swing.JFrame {
         admin.setText("ADMIN");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnMakanan.setBorder(null);
