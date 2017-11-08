@@ -7,6 +7,7 @@ package views;
 
 import controllers.c_menu;
 import java.awt.event.ActionListener;
+import javax.swing.JFrame;
 
 /**
  *
@@ -17,10 +18,11 @@ public class v_MENU extends javax.swing.JFrame {
     /**
      * Creates new form v_MENU
      */
-    
     public v_MENU() {
         initComponents();
         this.setLocationRelativeTo(this);
+//        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
     }
 
     /**
@@ -96,12 +98,12 @@ public class v_MENU extends javax.swing.JFrame {
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel menu;
     // End of variables declaration//GEN-END:variables
-    
-    public void getBtnLogin(ActionListener a){
+
+    public void getBtnLogin(ActionListener a) {
         btnLogin.addActionListener(a);
     }
-    
-    public void getBtnKeluar(ActionListener a){
+
+    public void getBtnKeluar(ActionListener a) {
         btnKeluar.addActionListener(a);
     }
 }
