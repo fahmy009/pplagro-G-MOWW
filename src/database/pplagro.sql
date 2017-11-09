@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 13, 2017 at 12:17 PM
+-- Generation Time: Nov 09, 2017 at 01:24 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.2
 
@@ -43,12 +43,46 @@ INSERT INTO `jenis_makanan` (`id_jenis`, `jenis`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `jenis_sapi`
+--
+
+CREATE TABLE `jenis_sapi` (
+  `id_jenis_sapi` int(11) NOT NULL,
+  `jenis_sapi` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `jenis_sapi`
+--
+
+INSERT INTO `jenis_sapi` (`id_jenis_sapi`, `jenis_sapi`) VALUES
+(1, 'Limousin'),
+(2, 'Simmental'),
+(3, 'Brahma'),
+(4, 'Brangus'),
+(5, 'Aberdeen Angus'),
+(6, 'Beefalo'),
+(7, 'Braford'),
+(8, 'Hereford'),
+(9, 'Dexter'),
+(10, 'Parthenais'),
+(11, 'Belgian blue'),
+(12, 'Droughtmaster'),
+(13, 'Murray grey'),
+(14, 'Pinzgauer'),
+(15, 'Ongole'),
+(16, 'Madura'),
+(17, 'Bali'),
+(18, 'Aceh');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `kandang`
 --
 
 CREATE TABLE `kandang` (
   `id_kandang` int(11) NOT NULL,
-  `nomor_kandang` int(11) NOT NULL,
   `kapasitas_kandang` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
@@ -56,8 +90,8 @@ CREATE TABLE `kandang` (
 -- Dumping data for table `kandang`
 --
 
-INSERT INTO `kandang` (`id_kandang`, `nomor_kandang`, `kapasitas_kandang`) VALUES
-(2, 12, 12);
+INSERT INTO `kandang` (`id_kandang`, `kapasitas_kandang`) VALUES
+(5, 10);
 
 -- --------------------------------------------------------
 
@@ -70,6 +104,13 @@ CREATE TABLE `makanan` (
   `id_jenis` int(11) NOT NULL,
   `id_nama_makanan` int(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `makanan`
+--
+
+INSERT INTO `makanan` (`id_makanan`, `id_jenis`, `id_nama_makanan`) VALUES
+(3, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -126,6 +167,46 @@ INSERT INTO `nama_makanan` (`id_nama_makanan`, `nama_makanan`, `persentase_BK`, 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `sapi`
+--
+
+CREATE TABLE `sapi` (
+  `id_sapi` int(11) NOT NULL,
+  `berat_sapi` double DEFAULT NULL,
+  `umur_sapi` int(11) NOT NULL,
+  `pakan_sapi` int(11) DEFAULT NULL,
+  `vitamin` int(11) DEFAULT NULL,
+  `vaksin` int(11) DEFAULT NULL,
+  `id_validasi` int(11) DEFAULT NULL,
+  `id_saran` int(11) DEFAULT NULL,
+  `id_kandang` int(11) DEFAULT NULL,
+  `id_jenis_sapi` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sapi`
+--
+
+INSERT INTO `sapi` (`id_sapi`, `berat_sapi`, `umur_sapi`, `pakan_sapi`, `vitamin`, `vaksin`, `id_validasi`, `id_saran`, `id_kandang`, `id_jenis_sapi`) VALUES
+(2, 15700.09, 3, NULL, NULL, NULL, NULL, NULL, 5, NULL),
+(15, NULL, 23, NULL, NULL, NULL, NULL, NULL, 5, NULL),
+(16, NULL, 45, NULL, NULL, NULL, NULL, NULL, 5, NULL),
+(17, NULL, 21, NULL, NULL, NULL, NULL, NULL, 5, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `saran`
+--
+
+CREATE TABLE `saran` (
+  `id_saran` int(11) NOT NULL,
+  `saran` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -141,8 +222,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `username`, `password`, `level`) VALUES
-(1, 'fahmy', 'fahmy', 'admin'),
-(2, 'haris', 'haris', 'peternak');
+(1, 'admin', 'admin', 'admin'),
+(2, 'peternak', 'peternak', 'peternak');
 
 -- --------------------------------------------------------
 
@@ -152,7 +233,6 @@ INSERT INTO `user` (`id_user`, `username`, `password`, `level`) VALUES
 
 CREATE TABLE `validasi` (
   `id_validasi` int(11) NOT NULL,
-  `id_sapi` int(11) NOT NULL,
   `validasi` enum('Diterima','Ditolak','','') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -167,11 +247,17 @@ ALTER TABLE `jenis_makanan`
   ADD PRIMARY KEY (`id_jenis`);
 
 --
+-- Indexes for table `jenis_sapi`
+--
+ALTER TABLE `jenis_sapi`
+  ADD PRIMARY KEY (`id_jenis_sapi`);
+
+--
 -- Indexes for table `kandang`
 --
 ALTER TABLE `kandang`
   ADD PRIMARY KEY (`id_kandang`),
-  ADD UNIQUE KEY `nomor_kandang` (`nomor_kandang`);
+  ADD UNIQUE KEY `id_kandang` (`id_kandang`);
 
 --
 -- Indexes for table `makanan`
@@ -188,6 +274,24 @@ ALTER TABLE `nama_makanan`
   ADD PRIMARY KEY (`id_nama_makanan`);
 
 --
+-- Indexes for table `sapi`
+--
+ALTER TABLE `sapi`
+  ADD PRIMARY KEY (`id_sapi`),
+  ADD KEY `id_berat_sapi` (`berat_sapi`),
+  ADD KEY `id_validasi` (`id_validasi`),
+  ADD KEY `id_saran` (`id_saran`),
+  ADD KEY `id_kandang` (`id_kandang`),
+  ADD KEY `id_kandang_2` (`id_kandang`),
+  ADD KEY `id_jenis_sapi` (`id_jenis_sapi`);
+
+--
+-- Indexes for table `saran`
+--
+ALTER TABLE `saran`
+  ADD PRIMARY KEY (`id_saran`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -197,8 +301,7 @@ ALTER TABLE `user`
 -- Indexes for table `validasi`
 --
 ALTER TABLE `validasi`
-  ADD PRIMARY KEY (`id_validasi`),
-  ADD KEY `id_sapi` (`id_sapi`);
+  ADD PRIMARY KEY (`id_validasi`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -210,20 +313,30 @@ ALTER TABLE `validasi`
 ALTER TABLE `jenis_makanan`
   MODIFY `id_jenis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `kandang`
+-- AUTO_INCREMENT for table `jenis_sapi`
 --
-ALTER TABLE `kandang`
-  MODIFY `id_kandang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `jenis_sapi`
+  MODIFY `id_jenis_sapi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `makanan`
 --
 ALTER TABLE `makanan`
-  MODIFY `id_makanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_makanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `nama_makanan`
 --
 ALTER TABLE `nama_makanan`
   MODIFY `id_nama_makanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+--
+-- AUTO_INCREMENT for table `sapi`
+--
+ALTER TABLE `sapi`
+  MODIFY `id_sapi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+--
+-- AUTO_INCREMENT for table `saran`
+--
+ALTER TABLE `saran`
+  MODIFY `id_saran` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `user`
 --
@@ -244,6 +357,15 @@ ALTER TABLE `validasi`
 ALTER TABLE `makanan`
   ADD CONSTRAINT `makanan_ibfk_1` FOREIGN KEY (`id_jenis`) REFERENCES `jenis_makanan` (`id_jenis`),
   ADD CONSTRAINT `makanan_ibfk_2` FOREIGN KEY (`id_nama_makanan`) REFERENCES `nama_makanan` (`id_nama_makanan`);
+
+--
+-- Constraints for table `sapi`
+--
+ALTER TABLE `sapi`
+  ADD CONSTRAINT `sapi_ibfk_1` FOREIGN KEY (`id_saran`) REFERENCES `saran` (`id_saran`),
+  ADD CONSTRAINT `sapi_ibfk_2` FOREIGN KEY (`id_validasi`) REFERENCES `validasi` (`id_validasi`),
+  ADD CONSTRAINT `sapi_ibfk_3` FOREIGN KEY (`id_kandang`) REFERENCES `kandang` (`id_kandang`),
+  ADD CONSTRAINT `sapi_ibfk_4` FOREIGN KEY (`id_jenis_sapi`) REFERENCES `jenis_sapi` (`id_jenis_sapi`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
