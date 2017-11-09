@@ -8,6 +8,7 @@ package views;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
@@ -23,6 +24,8 @@ public class v_PENGHITUNG extends javax.swing.JFrame {
     public v_PENGHITUNG() {
         initComponents();
         this.setLocationRelativeTo(this);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
     }
 
     /**
@@ -53,33 +56,33 @@ public class v_PENGHITUNG extends javax.swing.JFrame {
         hasilHitungan.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         hasilHitungan.setEnabled(false);
         hasilHitungan.setOpaque(false);
-        getContentPane().add(hasilHitungan, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 170, 30));
+        getContentPane().add(hasilHitungan, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 290, 360, 50));
 
         kg1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         kg1.setText("KG");
-        getContentPane().add(kg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 180, 30, 50));
+        getContentPane().add(kg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 280, 30, 60));
 
         kg.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         kg.setText("CM");
-        getContentPane().add(kg, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, 30, 50));
+        getContentPane().add(kg, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 210, 40, 60));
 
         lingkarDada.setBorder(null);
         lingkarDada.setInheritsPopupMenu(true);
         lingkarDada.setOpaque(false);
-        getContentPane().add(lingkarDada, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 170, 30));
+        getContentPane().add(lingkarDada, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 210, 360, 60));
 
         btnUpdate.setBorder(null);
         btnUpdate.setBorderPainted(false);
         btnUpdate.setContentAreaFilled(false);
-        getContentPane().add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 442, 90, 30));
+        getContentPane().add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 680, 160, 60));
 
         btnKembali.setBorder(null);
         btnKembali.setBorderPainted(false);
         btnKembali.setContentAreaFilled(false);
-        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 440, 100, 30));
+        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 680, 160, 50));
 
         nomorSapi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
-        getContentPane().add(nomorSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 230, 50));
+        getContentPane().add(nomorSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 130, 370, 70));
 
         tableSapi.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -96,10 +99,10 @@ public class v_PENGHITUNG extends javax.swing.JFrame {
         tableSapi.setOpaque(false);
         jScrollPane1.setViewportView(tableSapi);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 590, 200));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 980, 300));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/peternak_ukur berat.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/peternak-lingkar dada.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -186,5 +189,5 @@ public class v_PENGHITUNG extends javax.swing.JFrame {
     public JComboBox<String> getNomorSapi() {
         return nomorSapi;
     }
-    
+
 }

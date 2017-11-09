@@ -7,6 +7,7 @@ package views;
 
 import java.awt.event.ActionListener;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
@@ -22,6 +23,8 @@ public class v_MAKANAN extends javax.swing.JFrame {
     public v_MAKANAN() {
         initComponents();
         this.setLocationRelativeTo(this);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
     }
 
     /**
@@ -48,22 +51,22 @@ public class v_MAKANAN extends javax.swing.JFrame {
 
         cbJjenisMakanan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbJjenisMakanan.setBorder(null);
-        getContentPane().add(cbJjenisMakanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, 210, 30));
+        getContentPane().add(cbJjenisMakanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 170, 380, 70));
 
         btnTambah.setBorder(null);
         btnTambah.setBorderPainted(false);
         btnTambah.setContentAreaFilled(false);
-        getContentPane().add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, 90, 40));
+        getContentPane().add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 680, 160, 50));
 
         btnHapus.setBorder(null);
         btnHapus.setBorderPainted(false);
         btnHapus.setContentAreaFilled(false);
-        getContentPane().add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, 90, 40));
+        getContentPane().add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 680, 150, 50));
 
         btnKembali.setBorder(null);
         btnKembali.setBorderPainted(false);
         btnKembali.setContentAreaFilled(false);
-        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(686, 440, 90, 30));
+        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 680, 160, 50));
 
         tableMakanan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -80,14 +83,14 @@ public class v_MAKANAN extends javax.swing.JFrame {
         tableMakanan.setOpaque(false);
         jScrollPane1.setViewportView(tableMakanan);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 590, 200));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 340, 980, 300));
 
         cbMakanan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbMakanan.setBorder(null);
-        getContentPane().add(cbMakanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 170, 210, 30));
+        getContentPane().add(cbMakanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 250, 380, 70));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin_makanan.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/admin-makanan.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

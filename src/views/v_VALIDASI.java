@@ -6,6 +6,7 @@
 package views;
 
 import java.awt.event.ActionListener;
+import javax.swing.JFrame;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 
@@ -21,6 +22,8 @@ public class v_VALIDASI extends javax.swing.JFrame {
     public v_VALIDASI() {
         initComponents();
         this.setLocationRelativeTo(this);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
     }
 
     /**
@@ -32,18 +35,30 @@ public class v_VALIDASI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tabelValidasi = new javax.swing.JTable();
         btnTolak = new javax.swing.JButton();
         btnValidasi = new javax.swing.JButton();
+        btnKembali = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabelValidasi = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
         saran = new javax.swing.JTextArea();
-        btnKembali = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnTolak.setBorder(null);
+        btnTolak.setContentAreaFilled(false);
+        getContentPane().add(btnTolak, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 570, 160, 50));
+
+        btnValidasi.setBorder(null);
+        btnValidasi.setContentAreaFilled(false);
+        getContentPane().add(btnValidasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, 160, 50));
+
+        btnKembali.setBorder(null);
+        btnKembali.setContentAreaFilled(false);
+        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 680, 160, 50));
 
         tabelValidasi.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -60,29 +75,17 @@ public class v_VALIDASI extends javax.swing.JFrame {
         tabelValidasi.setOpaque(false);
         jScrollPane1.setViewportView(tabelValidasi);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 420, 340));
-
-        btnTolak.setBorder(null);
-        btnTolak.setContentAreaFilled(false);
-        getContentPane().add(btnTolak, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 370, 110, 30));
-
-        btnValidasi.setBorder(null);
-        btnValidasi.setContentAreaFilled(false);
-        getContentPane().add(btnValidasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 370, 100, 30));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 100, 690, 520));
 
         saran.setEditable(false);
         saran.setColumns(20);
         saran.setRows(5);
         jScrollPane2.setViewportView(saran);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 330, 280));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 540, 430));
 
-        btnKembali.setBorder(null);
-        btnKembali.setContentAreaFilled(false);
-        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(678, 440, 100, 30));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin_validasi.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/admin-validasi.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

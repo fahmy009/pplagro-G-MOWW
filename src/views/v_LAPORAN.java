@@ -10,6 +10,7 @@ import java.awt.event.ItemListener;
 import javax.swing.ButtonGroup;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JRadioButton;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
@@ -27,6 +28,8 @@ public class v_LAPORAN extends javax.swing.JFrame {
     public v_LAPORAN() {
         initComponents();
         this.setLocationRelativeTo(this);
+                this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
     }
 
     /**
@@ -83,53 +86,53 @@ public class v_LAPORAN extends javax.swing.JFrame {
         tableSapi.setGridColor(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(tableSapi);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 370, 190));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 130, 610, 290));
 
         beratSapi.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         beratSapi.setEnabled(false);
-        getContentPane().add(beratSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 210, 33));
+        getContentPane().add(beratSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 350, 60));
 
         cbNomor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
-        getContentPane().add(cbNomor, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 210, 35));
+        getContentPane().add(cbNomor, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, 350, 50));
 
         umurSapi.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         umurSapi.setEnabled(false);
-        getContentPane().add(umurSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 210, 35));
+        getContentPane().add(umurSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 350, 60));
 
         cbPakan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
-        getContentPane().add(cbPakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 210, 39));
+        getContentPane().add(cbPakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, 350, 50));
 
         saran.setEditable(false);
         saran.setColumns(20);
         saran.setRows(5);
         jScrollPane2.setViewportView(saran);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, 370, 130));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 450, 610, 170));
 
         cbVitamin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbVitamin.setEnabled(false);
-        getContentPane().add(cbVitamin, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 210, 39));
+        getContentPane().add(cbVitamin, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 370, 350, 60));
 
         cbVaksin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbVaksin.setEnabled(false);
-        getContentPane().add(cbVaksin, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 210, 40));
+        getContentPane().add(cbVaksin, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 530, 350, 60));
 
         btnHitung.setBorder(null);
         btnHitung.setBorderPainted(false);
         btnHitung.setContentAreaFilled(false);
-        getContentPane().add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 170, 50));
+        getContentPane().add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 620, 270, 60));
 
         cek.setBorder(null);
         cek.setContentAreaFilled(false);
-        getContentPane().add(cek, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 20, 39));
+        getContentPane().add(cek, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 380, 20, 39));
 
         cek2.setBorder(null);
         cek2.setContentAreaFilled(false);
-        getContentPane().add(cek2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 340, 20, 44));
+        getContentPane().add(cek2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 530, 20, 44));
 
-        lnomor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/peternak_sppk.png"))); // NOI18N
+        lnomor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/peternak-sppk.png"))); // NOI18N
         lnomor.setText("NOMOR SAPI");
-        getContentPane().add(lnomor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
+        getContentPane().add(lnomor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         lberat.setText("BERAT SAPI");
         getContentPane().add(lberat, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 86, -1, -1));

@@ -7,6 +7,7 @@ package views;
 
 import java.awt.event.ActionListener;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
@@ -22,6 +23,8 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
     public v_ADMINSAPI() {
         initComponents();
         this.setLocationRelativeTo(this);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
     }
 
     /**
@@ -92,8 +95,6 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
         cbJenisSapi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbJenisSapi.setBorder(null);
         getContentPane().add(cbJenisSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 210, 30));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/jenis sapi.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
 
         pack();
@@ -165,18 +166,18 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
     public JTable getTableSapi() {
         return tableSapi;
     }
-    
-    public void hapus(){
+
+    public void hapus() {
         umurSapi.setText("");
         cbKandang.setSelectedIndex(0);
     }
-    
+
     public void setComboKandang(String[] comboAngkatan) {
         for (String a : comboAngkatan) {
             this.cbKandang.addItem(a);
         }
     }
-    
+
     public void setComboJenis(String[] comboAngkatan) {
         for (String a : comboAngkatan) {
             this.cbJenisSapi.addItem(a);
@@ -190,5 +191,5 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
     public JComboBox<String> getCbJenisSapi() {
         return cbJenisSapi;
     }
-    
+
 }

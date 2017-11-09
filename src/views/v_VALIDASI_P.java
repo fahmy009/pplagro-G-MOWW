@@ -6,6 +6,7 @@
 package views;
 
 import java.awt.event.ActionListener;
+import javax.swing.JFrame;
 import javax.swing.JTable;
 
 /**
@@ -20,6 +21,8 @@ public class v_VALIDASI_P extends javax.swing.JFrame {
     public v_VALIDASI_P() {
         initComponents();
         this.setLocationRelativeTo(this);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
     }
 
     /**
@@ -31,14 +34,19 @@ public class v_VALIDASI_P extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnKembali = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         validasi = new javax.swing.JTable();
-        btnKembali = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnKembali.setBorder(null);
+        btnKembali.setBorderPainted(false);
+        btnKembali.setContentAreaFilled(false);
+        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 680, 160, 50));
 
         validasi.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -56,15 +64,10 @@ public class v_VALIDASI_P extends javax.swing.JFrame {
         validasi.setOpaque(false);
         jScrollPane1.setViewportView(validasi);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 740, 340));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 1220, 530));
 
-        btnKembali.setBorder(null);
-        btnKembali.setBorderPainted(false);
-        btnKembali.setContentAreaFilled(false);
-        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 440, 100, 40));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/peternak.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/peterna.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -115,8 +118,8 @@ public class v_VALIDASI_P extends javax.swing.JFrame {
         return validasi;
     }
 
-    public void btnKembali(ActionListener a){
+    public void btnKembali(ActionListener a) {
         btnKembali.addActionListener(a);
     }
-    
+
 }

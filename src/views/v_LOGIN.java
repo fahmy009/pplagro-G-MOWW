@@ -8,6 +8,7 @@ package views;
 import controllers.c_user;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -24,6 +25,8 @@ public class v_LOGIN extends javax.swing.JFrame {
     public v_LOGIN() {
         initComponents();
         this.setLocationRelativeTo(this);
+                this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
     }
 
     /**
@@ -49,19 +52,19 @@ public class v_LOGIN extends javax.swing.JFrame {
 
         username.setBorder(null);
         username.setOpaque(false);
-        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 207, 170, 40));
+        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 310, 280, 70));
 
         password.setBorder(null);
         password.setOpaque(false);
-        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 280, 170, 40));
+        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 430, 280, 70));
 
         btnLogin.setBorder(null);
         btnLogin.setBorderPainted(false);
         btnLogin.setContentAreaFilled(false);
-        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, 340, 60));
+        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 540, 550, 80));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/login.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 500));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/login.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

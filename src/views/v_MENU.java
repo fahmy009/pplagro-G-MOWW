@@ -21,7 +21,7 @@ public class v_MENU extends javax.swing.JFrame {
     public v_MENU() {
         initComponents();
         this.setLocationRelativeTo(this);
-//        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
     }
 
@@ -45,15 +45,15 @@ public class v_MENU extends javax.swing.JFrame {
         btnKeluar.setBorder(null);
         btnKeluar.setBorderPainted(false);
         btnKeluar.setContentAreaFilled(false);
-        getContentPane().add(btnKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 100, 40));
+        getContentPane().add(btnKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1300, 10, 60, 60));
 
         btnLogin.setBorder(null);
         btnLogin.setBorderPainted(false);
         btnLogin.setContentAreaFilled(false);
-        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, 100, 40));
+        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 650, 170, 60));
 
-        menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/selamat datang2.png"))); // NOI18N
-        getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 500));
+        menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/tampilan awal.png"))); // NOI18N
+        getContentPane().add(menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
