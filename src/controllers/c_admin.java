@@ -18,10 +18,14 @@ import models.m_user;
 import models.m_validasi;
 import views.v_ADMIN;
 import views.v_ADMINSAPI;
+import views.v_CRUDJENIS;
+import views.v_CRUDPAKAN;
+import views.v_JENISSAPI;
 import views.v_KANDANG;
 import views.v_LOGIN;
 import views.v_MAKANAN;
 import views.v_MENU;
+import views.v_NAMAPAKAN;
 import views.v_VALIDASI;
 
 /**
@@ -31,6 +35,8 @@ import views.v_VALIDASI;
 public class c_admin {
 
     v_ADMIN view;
+    v_JENISSAPI view2;
+    v_NAMAPAKAN view3;
 
     public c_admin(v_ADMIN view) {
         this.view = view;
@@ -39,8 +45,33 @@ public class c_admin {
         view.getBtnValidasi(new btnValidasi());
         view.getBtnMakanan(new btnMakanan());
         view.getBtnLogout(new btnLogout());
-        view.getBtnSapi(new btnSapi());
+        view.getBtnSapi(new btnSapiSplit());
         view.getBtnProfile(new btnProfile());
+    }
+
+    public c_admin(v_JENISSAPI view2) {
+        this.view2 = view2;
+        view2.setVisible(true);
+        view2.btnJenisSapi(new btnJenisSapi());
+        view2.btnLogout(new btnLogout());
+        view2.btnSapi(new btnSapi());
+    }
+    
+    private class btnSapiSplit implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            c_admin a = new c_admin(new v_JENISSAPI());
+            view.dispose();
+        }
+    }
+
+    private class btnJenisSapi implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            
+        }
     }
 
     private class btnProfile implements ActionListener {

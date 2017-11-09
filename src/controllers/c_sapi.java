@@ -24,6 +24,7 @@ public class c_sapi {
 
     v_ADMINSAPI view;
     m_sapi model;
+    
 
     public c_sapi(v_ADMINSAPI view, m_sapi model) throws SQLException {
         this.view = view;

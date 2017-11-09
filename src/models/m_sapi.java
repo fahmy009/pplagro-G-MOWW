@@ -52,7 +52,7 @@ public class m_sapi extends modelInheritance {
     }
 
     public DefaultTableModel getTable() throws SQLException {
-        String header[] = {"Nomor Sapi","Jenis Sapi", "Berat Sapi", "Umur Sapi", "Nomor Kandang"};
+        String header[] = {"Nomor Sapi", "Jenis Sapi", "Berat Sapi", "Umur Sapi", "Nomor Kandang"};
         DefaultTableModel tabelModel = new DefaultTableModel(null, header);
         ResultSet rs = kon.getResult("SELECT s.id_sapi, j.jenis_sapi, s.berat_sapi, s.umur_sapi, k.id_kandang FROM sapi s join kandang k on s.id_kandang=k.id_kandang join jenis_sapi j on s.id_jenis_sapi = j.id_jenis_sapi");
         for (int i = tabelModel.getRowCount() - 1; i >= 0; i--) {
@@ -188,4 +188,20 @@ public class m_sapi extends modelInheritance {
         a = 0;
         return tahun;
     }
+
+    public boolean save3(String query) throws SQLException {
+        String queries = "INSERT INTO jenis_sapi VALUES (" + query + ")";
+        return super.save(queries); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public boolean update3(String query, String id) throws SQLException {
+        String queries = "UPDATE jenis_sapi SET jenis_sapi=" + query + "where id_jenis_sapi=" + id;
+        return super.update(queries); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public boolean delete3(String query) throws SQLException {
+        String queries = "DELETE FROM jenis_sapi where id_jenis_sapi=" + query;
+        return super.delete(queries); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
