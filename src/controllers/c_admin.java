@@ -70,7 +70,12 @@ public class c_admin {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            
+            try {
+                c_sapi a = new c_sapi(new v_CRUDJENIS(), new m_sapi());
+                view2.dispose();
+            } catch (SQLException ex) {
+                Logger.getLogger(c_admin.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
 
@@ -89,7 +94,7 @@ public class c_admin {
         public void actionPerformed(ActionEvent e) {
             try {
                 c_sapi a = new c_sapi(new v_ADMINSAPI(), new m_sapi());
-                view.dispose();
+                view2.dispose();
             } catch (SQLException ex) {
                 Logger.getLogger(c_admin.class.getName()).log(Level.SEVERE, null, ex);
             }

@@ -194,14 +194,27 @@ public class m_sapi extends modelInheritance {
         return super.save(queries); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public boolean update3(String query, String id) throws SQLException {
-        String queries = "UPDATE jenis_sapi SET jenis_sapi=" + query + "where id_jenis_sapi=" + id;
-        return super.update(queries); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public boolean delete3(String query) throws SQLException {
         String queries = "DELETE FROM jenis_sapi where id_jenis_sapi=" + query;
         return super.delete(queries); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public DefaultTableModel getTable3() throws SQLException {
+        String header[] = {"Id Jenis Sapi", "Jenis Sapi"};
+        DefaultTableModel tabelModel = new DefaultTableModel(null, header);
+        ResultSet rs = kon.getResult("select * from jenis_sapi");
+        for (int i = tabelModel.getRowCount() - 1; i >= 0; i--) {
+            tabelModel.removeRow(i);
+        }
+        while (rs.next()) {
+            String kolom[] = new String[2];
+            for (int i = 0; i < kolom.length; i++) {
+                kolom[i] = rs.getString(i + 1);
+            }
+
+            tabelModel.addRow(kolom);
+        }
+        return tabelModel;
     }
 
 }

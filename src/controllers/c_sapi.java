@@ -14,6 +14,8 @@ import javax.swing.JOptionPane;
 import models.m_sapi;
 import views.v_ADMIN;
 import views.v_ADMINSAPI;
+import views.v_CRUDJENIS;
+import views.v_JENISSAPI;
 import views.v_LAPORAN;
 
 /**
@@ -24,7 +26,7 @@ public class c_sapi {
 
     v_ADMINSAPI view;
     m_sapi model;
-    
+    v_CRUDJENIS view2;
 
     public c_sapi(v_ADMINSAPI view, m_sapi model) throws SQLException {
         this.view = view;
@@ -37,6 +39,56 @@ public class c_sapi {
         view.getTableSapi().setModel(model.getTable());
         view.setVisible(true);
     }
+
+    public c_sapi(v_CRUDJENIS view2, m_sapi model) throws SQLException {
+        this.view2 = view2;
+        this.model = model;
+        view2.setVisible(true);
+        view2.getSapi().setModel(model.getTable3());
+        view2.btnHapus(new btnHapusJenis());
+        view2.btnKembali(new btnKembaliJenis());
+        view2.btnTambah(new btnTambahJenis());
+    }
+
+    private class btnHapusJenis implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (view2.getSapi().getSelectedRow() == -1) {
+                JOptionPane.showMessageDialog(view2, "Silahkan Pilih Data Terlebih Dahulu");
+            } else {
+                try {
+                    model.delete3((String) view2.getSapi().getValueAt(view2.getSapi().getSelectedRow(), 0));
+                    view2.getSapi().setModel(model.getTable3());
+                } catch (SQLException ex) {
+                    Logger.getLogger(c_sapi.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }
+
+    private class btnKembaliJenis implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            c_admin a = new c_admin(new v_JENISSAPI());
+            view2.dispose();
+        }
+    }
+
+    private class btnTambahJenis implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            try {
+                model.save3("NULL,'" + view2.getJenisSapi().getText() + "'");
+                view2.getSapi().setModel(model.getTable3());
+            } catch (SQLException ex) {
+                Logger.getLogger(c_sapi.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }
+
 
     private class btnHapus implements ActionListener {
 

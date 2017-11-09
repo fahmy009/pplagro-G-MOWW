@@ -6,6 +6,7 @@
 package views;
 
 import java.awt.event.ActionListener;
+import java.awt.event.ItemListener;
 import javax.swing.JFrame;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -41,7 +42,6 @@ public class v_CRUDJENIS extends javax.swing.JFrame {
         btnKembali = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         btnTambah = new javax.swing.JButton();
-        btnUPdate = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -70,13 +70,10 @@ public class v_CRUDJENIS extends javax.swing.JFrame {
         getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 650, 80, 60));
 
         btnDelete.setText("HAPUS");
-        getContentPane().add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 640, 80, 60));
+        getContentPane().add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 640, 80, 60));
 
         btnTambah.setText("TAMBAH");
         getContentPane().add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 640, 80, 60));
-
-        btnUPdate.setText("UPDATE");
-        getContentPane().add(btnUPdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 640, 80, 60));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -120,7 +117,6 @@ public class v_CRUDJENIS extends javax.swing.JFrame {
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnKembali;
     private javax.swing.JButton btnTambah;
-    private javax.swing.JButton btnUPdate;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jenisSapi;
     private javax.swing.JLabel lNamaPakan;
@@ -139,10 +135,7 @@ public class v_CRUDJENIS extends javax.swing.JFrame {
         this.btnTambah.addActionListener(a);
     }
 
-    public void btnUpdate(ActionListener a) {
-        this.btnUPdate.addActionListener(a);
-    }
-
+  
     public JTextField getJenisSapi() {
         return jenisSapi;
     }
@@ -150,6 +143,5 @@ public class v_CRUDJENIS extends javax.swing.JFrame {
     public JTable getSapi() {
         return sapi;
     }
-    
     
 }
