@@ -46,6 +46,7 @@ public class c_hitung {
         public void actionPerformed(ActionEvent e) {
             try {
                 model.update(Double.toString(hasil), (String) view.getNomorSapi().getSelectedItem());
+                System.out.println(Double.toString(hasil) +" "+ (String) view.getNomorSapi().getSelectedItem());
                 view.getTableSapi().setModel(model.getTable());
                 view.getNomorSapi().setSelectedIndex(0);
                 view.getLingkarDada().setText("");

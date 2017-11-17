@@ -44,6 +44,9 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
         umurSapi = new javax.swing.JTextField();
         cbKandang = new javax.swing.JComboBox<>();
         cbJenisSapi = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -51,16 +54,19 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(830, 520));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnKembali.setText("kembali");
         btnKembali.setBorder(null);
         btnKembali.setBorderPainted(false);
         btnKembali.setContentAreaFilled(false);
         getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 440, 100, 30));
 
+        btnTambahSapi.setText("tambah");
         btnTambahSapi.setBorder(null);
         btnTambahSapi.setBorderPainted(false);
         btnTambahSapi.setContentAreaFilled(false);
         getContentPane().add(btnTambahSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, 100, 40));
 
+        btnHapusSapi.setText("hapus");
         btnHapusSapi.setBorder(null);
         btnHapusSapi.setBorderPainted(false);
         btnHapusSapi.setContentAreaFilled(false);
@@ -95,6 +101,15 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
         cbJenisSapi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbJenisSapi.setBorder(null);
         getContentPane().add(cbJenisSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 210, 30));
+
+        jLabel2.setText("umur");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, -1, -1));
+
+        jLabel3.setText("kandang");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, -1, -1));
+
+        jLabel4.setText("jenis");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, -1));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
 
         pack();
@@ -142,6 +157,9 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbJenisSapi;
     private javax.swing.JComboBox<String> cbKandang;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tableSapi;
     private javax.swing.JTextField umurSapi;

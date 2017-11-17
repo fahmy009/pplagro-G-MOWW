@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2017 at 01:24 AM
+-- Generation Time: Nov 10, 2017 at 02:33 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.2
 
@@ -91,7 +91,9 @@ CREATE TABLE `kandang` (
 --
 
 INSERT INTO `kandang` (`id_kandang`, `kapasitas_kandang`) VALUES
-(5, 10);
+(5, 10),
+(23, 23),
+(234, 23);
 
 -- --------------------------------------------------------
 
@@ -188,10 +190,10 @@ CREATE TABLE `sapi` (
 --
 
 INSERT INTO `sapi` (`id_sapi`, `berat_sapi`, `umur_sapi`, `pakan_sapi`, `vitamin`, `vaksin`, `id_validasi`, `id_saran`, `id_kandang`, `id_jenis_sapi`) VALUES
-(2, 15700.09, 3, NULL, NULL, NULL, NULL, NULL, 5, NULL),
-(15, NULL, 23, NULL, NULL, NULL, NULL, NULL, 5, NULL),
-(16, NULL, 45, NULL, NULL, NULL, NULL, NULL, 5, NULL),
-(17, NULL, 21, NULL, NULL, NULL, NULL, NULL, 5, 2);
+(2, 11.56, 3, NULL, NULL, NULL, NULL, NULL, 5, 3),
+(15, 15252.25, 23, NULL, NULL, NULL, NULL, NULL, 5, 17),
+(16, 1176.49, 45, NULL, NULL, NULL, NULL, NULL, 5, 15),
+(17, 1751652.25, 21, NULL, NULL, NULL, NULL, NULL, 5, 2);
 
 -- --------------------------------------------------------
 
@@ -203,6 +205,13 @@ CREATE TABLE `saran` (
   `id_saran` int(11) NOT NULL,
   `saran` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `saran`
+--
+
+INSERT INTO `saran` (`id_saran`, `saran`) VALUES
+(1, 'Tambahkan Vitamin dan Vaksin selama 1 minggu kedepan kemudian cek lagi untuk kelakuan dan kebiasaan sapi');
 
 -- --------------------------------------------------------
 
@@ -235,6 +244,14 @@ CREATE TABLE `validasi` (
   `id_validasi` int(11) NOT NULL,
   `validasi` enum('Diterima','Ditolak','','') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `validasi`
+--
+
+INSERT INTO `validasi` (`id_validasi`, `validasi`) VALUES
+(1, 'Diterima'),
+(2, 'Ditolak');
 
 --
 -- Indexes for dumped tables
@@ -336,7 +353,7 @@ ALTER TABLE `sapi`
 -- AUTO_INCREMENT for table `saran`
 --
 ALTER TABLE `saran`
-  MODIFY `id_saran` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_saran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `user`
 --
@@ -346,7 +363,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `validasi`
 --
 ALTER TABLE `validasi`
-  MODIFY `id_validasi` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_validasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Constraints for dumped tables
 --

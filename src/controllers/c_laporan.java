@@ -9,6 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -38,13 +40,47 @@ public class c_laporan {
         views.validasi2(new cek2());
         views.btnHitung(new hitung());
         views.btnKembali(new kembali());
+        views.getTableSapi().setModel(model.getTableLaporan());
+        views.coba(new mouse());
     }
 
+    private class mouse implements MouseListener {
+
+        @Override
+        public void mouseClicked(MouseEvent e) {
+        }
+
+        @Override
+        public void mousePressed(MouseEvent e) {
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e) {
+                views.getSaran().setText((String) views.getTableSapi().getValueAt(views.getTableSapi().getSelectedRow(), 4));
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
+        }
+
+    }
+
+   
     private class hitung implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            
+            try {
+                //kebutuhan bahan makanan sapi dengan metode pearson square
+                model.update("", (String) views.getCbNomor().getSelectedItem());
+                views.getTableSapi().setModel(model.getTableLaporan());
+            } catch (SQLException ex) {
+                Logger.getLogger(c_laporan.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
 
@@ -98,5 +134,7 @@ public class c_laporan {
         }
 
     }
+    
+    
 
 }

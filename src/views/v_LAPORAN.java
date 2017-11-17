@@ -7,6 +7,7 @@ package views;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ItemListener;
+import java.awt.event.MouseListener;
 import javax.swing.ButtonGroup;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
@@ -28,7 +29,7 @@ public class v_LAPORAN extends javax.swing.JFrame {
     public v_LAPORAN() {
         initComponents();
         this.setLocationRelativeTo(this);
-                this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
     }
 
@@ -55,12 +56,12 @@ public class v_LAPORAN extends javax.swing.JFrame {
         btnHitung = new javax.swing.JButton();
         cek = new javax.swing.JCheckBox();
         cek2 = new javax.swing.JCheckBox();
-        lnomor = new javax.swing.JLabel();
         lberat = new javax.swing.JLabel();
         lumur = new javax.swing.JLabel();
         lpakan = new javax.swing.JLabel();
         lvaksin = new javax.swing.JLabel();
         lvitamin = new javax.swing.JLabel();
+        lnomor = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -69,7 +70,7 @@ public class v_LAPORAN extends javax.swing.JFrame {
         btnKembali.setBorder(null);
         btnKembali.setBorderPainted(false);
         btnKembali.setContentAreaFilled(false);
-        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 100, 30));
+        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 680, 150, 50));
 
         tableSapi.setForeground(new java.awt.Color(255, 255, 255));
         tableSapi.setModel(new javax.swing.table.DefaultTableModel(
@@ -93,18 +94,21 @@ public class v_LAPORAN extends javax.swing.JFrame {
         getContentPane().add(beratSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 350, 60));
 
         cbNomor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
-        getContentPane().add(cbNomor, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, 350, 50));
+        getContentPane().add(cbNomor, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 350, 60));
 
         umurSapi.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         umurSapi.setEnabled(false);
         getContentPane().add(umurSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 350, 60));
 
         cbPakan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
-        getContentPane().add(cbPakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, 350, 50));
+        getContentPane().add(cbPakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, 350, 60));
 
         saran.setEditable(false);
         saran.setColumns(20);
+        saran.setLineWrap(true);
         saran.setRows(5);
+        saran.setWrapStyleWord(true);
+        saran.setName(""); // NOI18N
         jScrollPane2.setViewportView(saran);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 450, 610, 170));
@@ -130,10 +134,6 @@ public class v_LAPORAN extends javax.swing.JFrame {
         cek2.setContentAreaFilled(false);
         getContentPane().add(cek2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 530, 20, 44));
 
-        lnomor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/peternak-sppk.png"))); // NOI18N
-        lnomor.setText("NOMOR SAPI");
-        getContentPane().add(lnomor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
-
         lberat.setText("BERAT SAPI");
         getContentPane().add(lberat, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 86, -1, -1));
 
@@ -148,6 +148,10 @@ public class v_LAPORAN extends javax.swing.JFrame {
 
         lvitamin.setText("VITAMIN");
         getContentPane().add(lvitamin, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 274, -1, -1));
+
+        lnomor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/peternak-sppk.png"))); // NOI18N
+        lnomor.setText("NOMOR SAPI");
+        getContentPane().add(lnomor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -270,7 +274,7 @@ public class v_LAPORAN extends javax.swing.JFrame {
     public void check(ItemListener a) {
         this.cbNomor.addItemListener(a);
     }
-    
+
     public void validasi(ItemListener a) {
         this.cek.addItemListener(a);
     }
@@ -278,7 +282,7 @@ public class v_LAPORAN extends javax.swing.JFrame {
     public JCheckBox getCek() {
         return cek;
     }
-    
+
     public void validasi2(ItemListener a) {
         this.cek2.addItemListener(a);
     }
@@ -286,14 +290,17 @@ public class v_LAPORAN extends javax.swing.JFrame {
     public JCheckBox getCek2() {
         return cek2;
     }
-    
-    public void btnHitung(ActionListener a){
+
+    public void btnHitung(ActionListener a) {
         btnHitung.addActionListener(a);
     }
-    
-    public void btnKembali(ActionListener a){
+
+    public void btnKembali(ActionListener a) {
         btnKembali.addActionListener(a);
     }
 
-        
+    public void coba(MouseListener a) {
+        tableSapi.addMouseListener(a);
+    }
+
 }

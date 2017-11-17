@@ -23,6 +23,7 @@ public class m_sapi extends modelInheritance {
     public static String coba;
     public static double berat;
     public static double umur;
+    public static String jenis;
 
     public m_sapi() throws SQLException {
         super();
@@ -99,6 +100,15 @@ public class m_sapi extends modelInheritance {
         return tahun;
     }
 
+    public String jenis(String id) throws SQLException {
+        String query = "SELECT * FROM sapi s join jenis_sapi j on s.id_jenis_sapi=j.id_jenis_sapi WHERE s.id_sapi=" + id;
+        ResultSet rs = kon.getResult(query);
+        while (rs.next()) {
+            jenis = rs.getString("j.jenis_sapi");
+        }
+        return jenis;
+    }
+
     public String coba(String id) throws SQLException {
         String query = "SELECT * FROM sapi WHERE id_sapi=" + id;
         ResultSet rs = kon.getResult(query);
@@ -160,14 +170,14 @@ public class m_sapi extends modelInheritance {
     }
 
     public String[] vitamin() throws SQLException {
-        String query = "SELECT * FROM kandang";
+        String query = "SELECT * FROM makanan m join jenis_makanan j ON m.id_jenis=j.id_jenis JOIN nama_makanan n ON m.id_nama_makanan=n.id_nama_makanan where j.jenis='vitamin'";
         ResultSet rs = kon.getResult(query);
         rs.last();
         String tahun[] = new String[rs.getRow()];
         rs.beforeFirst();
         int a = 0;
         while (rs.next()) {
-            tahun[a] = rs.getString("id_kandang");
+            tahun[a] = rs.getString("n.nama_makanan");
             a++;
         }
         a = 0;
@@ -175,14 +185,14 @@ public class m_sapi extends modelInheritance {
     }
 
     public String[] vaksin() throws SQLException {
-        String query = "SELECT * FROM kandang";
+        String query = "SELECT * FROM makanan m join jenis_makanan j ON m.id_jenis=j.id_jenis JOIN nama_makanan n ON m.id_nama_makanan=n.id_nama_makanan where j.jenis='vaksin'";
         ResultSet rs = kon.getResult(query);
         rs.last();
         String tahun[] = new String[rs.getRow()];
         rs.beforeFirst();
         int a = 0;
         while (rs.next()) {
-            tahun[a] = rs.getString("id_kandang");
+            tahun[a] = rs.getString("n.nama_makanan");
             a++;
         }
         a = 0;
@@ -208,6 +218,24 @@ public class m_sapi extends modelInheritance {
         }
         while (rs.next()) {
             String kolom[] = new String[2];
+            for (int i = 0; i < kolom.length; i++) {
+                kolom[i] = rs.getString(i + 1);
+            }
+
+            tabelModel.addRow(kolom);
+        }
+        return tabelModel;
+    }
+
+    public DefaultTableModel getTableLaporan() throws SQLException {
+        String header[] = {"Nomor Sapi", "Jenis Sapi", "Umur Sapi", "Berat Sapi", "Saran"};
+        DefaultTableModel tabelModel = new DefaultTableModel(null, header);
+        ResultSet rs = kon.getResult("select s.id_sapi, j.jenis_sapi, s.umur_sapi, s.berat_sapi, sr.saran from sapi s join jenis_sapi j on s.id_jenis_sapi=j.id_jenis_sapi join saran sr on sr.id_saran=s.id_saran");
+        for (int i = tabelModel.getRowCount() - 1; i >= 0; i--) {
+            tabelModel.removeRow(i);
+        }
+        while (rs.next()) {
+            String kolom[] = new String[5];
             for (int i = 0; i < kolom.length; i++) {
                 kolom[i] = rs.getString(i + 1);
             }

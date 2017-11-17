@@ -13,6 +13,7 @@ import java.util.logging.Logger;
 import models.m_sapi;
 import models.m_user;
 import models.m_validasi;
+import views.V_LAPORAN_NEW;
 import views.v_ADMINSAPI;
 import views.v_LOGIN;
 import views.v_PENGHITUNG;
@@ -57,7 +58,7 @@ public class c_peternak {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
-                c_laporan a = new c_laporan(new v_LAPORAN(), new m_sapi());
+                c_laporan_new a = new c_laporan_new(new V_LAPORAN_NEW(), new m_sapi());
                 view.dispose();
             } catch (SQLException ex) {
                 Logger.getLogger(c_peternak.class.getName()).log(Level.SEVERE, null, ex);
