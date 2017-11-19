@@ -121,13 +121,12 @@ public class c_sapi {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (view.getUmurSapi().getText().equalsIgnoreCase("") || view.getCbKandang().getSelectedIndex() == 0) {
+            if (view.getCbKandang().getSelectedIndex() == 0) {
                 JOptionPane.showMessageDialog(view, "Silahkan Dicek dan Diisi Kembali");
             } else {
                 try {
-                    model.save("NULL,NULL," + view.getUmurSapi().getText() + ",NULL,NULL,NULL,NULL,NULL," + view.getCbKandang().getSelectedItem() + "," + view.getCbJenisSapi().getSelectedIndex());
+                    model.save("NULL,NULL,now(),NULL,NULL,NULL,NULL,NULL," + view.getCbKandang().getSelectedItem() + "," + view.getCbJenisSapi().getSelectedIndex());
                     view.getTableSapi().setModel(model.getTable());
-                    view.hapus();
                 } catch (SQLException ex) {
                     Logger.getLogger(c_sapi.class.getName()).log(Level.SEVERE, null, ex);
                 }

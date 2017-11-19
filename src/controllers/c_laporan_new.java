@@ -156,6 +156,33 @@ public class c_laporan_new {
         @Override
         public void actionPerformed(ActionEvent e) {
             view.getSaran().setText("Tambahkan Vitamin dan Vaksin selama 1 minggu kedepan kemudian cek lagi untuk kelakuan dan kebiasaan sapi");
+            //bk = 3% * berat sapi
+            //pk = 14% * bk
+            //perbandingan = 60 : 30 : 10 || hijauan(rerumuputan/alami) : konsentrat(buatan/sentrat) : vaksinasi
+            //bk hijauan = 60% * bk
+            //bk konsentrat = 30% * bk
+            //pk (bahan makanan) = pk bahan * bk hijauan
+            //pk konsentrat untuk menutupi kekurangan = pk - pk (bahan makanan) 
+            // z pk(konsentrat) = (pk konseetrat kebutuhan / bk konsentrat) * 100%
+            //perhitungan z konsentrat
+            
+            //jika z konsentrat = z
+            //maka bahan makanan (vitamin) = 30% * pk bahan makanan (vitamin) -- ada ditabel tdn
+            //untuk bahan makanan (utama) = 60% * pk bahan makanan  (utama) -- ada ditabel tdn
+            //untuk vaksin = 10% * pk vitamin -- ada di tdn
+            //hasil perhitungan sumber energi = utama + vitamin + vaksin
+            
+            //hasil perhitungan sumber protein = utama + konsentrat (beda kandungan) || 15% dari 2 bahan makanan yang berbeda
+            
+            //----pearson square method
+            //sumber energi     |   hasil perhitungan energi                        (z pk(konsentrat) - hasil perhitungan protein)      30%
+            //
+            //
+            //                                                  z pk(konsentrat)
+            //                                          
+            //
+            //sumber protein    |   hasil perhitungan protein                       
+            
             view.erase();
         }
     }

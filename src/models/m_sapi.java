@@ -22,7 +22,7 @@ public class m_sapi extends modelInheritance {
     koneksi kon;
     public static String coba;
     public static double berat;
-    public static double umur;
+    public static String umur;
     public static String jenis;
 
     public m_sapi() throws SQLException {
@@ -55,7 +55,7 @@ public class m_sapi extends modelInheritance {
     public DefaultTableModel getTable() throws SQLException {
         String header[] = {"Nomor Sapi", "Jenis Sapi", "Berat Sapi", "Umur Sapi", "Nomor Kandang"};
         DefaultTableModel tabelModel = new DefaultTableModel(null, header);
-        ResultSet rs = kon.getResult("SELECT s.id_sapi, j.jenis_sapi, s.berat_sapi, s.umur_sapi, k.id_kandang FROM sapi s join kandang k on s.id_kandang=k.id_kandang join jenis_sapi j on s.id_jenis_sapi = j.id_jenis_sapi");
+        ResultSet rs = kon.getResult("SELECT s.id_sapi, j.jenis_sapi, s.berat_sapi,s.tanggal_masuk_sapi, k.id_kandang FROM sapi s join kandang k on s.id_kandang=k.id_kandang join jenis_sapi j on s.id_jenis_sapi = j.id_jenis_sapi");
         for (int i = tabelModel.getRowCount() - 1; i >= 0; i--) {
             tabelModel.removeRow(i);
         }
@@ -115,16 +115,16 @@ public class m_sapi extends modelInheritance {
         while (rs.next()) {
             coba = rs.getString("id_sapi");
             berat = rs.getDouble("berat_sapi");
-            umur = rs.getDouble("umur_sapi");
+            umur = rs.getString("tanggal_masuk_sapi");
         }
         return coba;
     }
 
-    public double umur(String id) throws SQLException {
+    public String umur(String id) throws SQLException {
         String query = "SELECT * FROM sapi WHERE id_sapi=" + id;
         ResultSet rs = kon.getResult(query);
         while (rs.next()) {
-            umur = rs.getDouble("umur_sapi");
+            umur = rs.getString("tanggal_masuk_sapi");
         }
         return umur;
     }
@@ -134,7 +134,7 @@ public class m_sapi extends modelInheritance {
         ResultSet rs = kon.getResult(query);
         while (rs.next()) {
             berat = rs.getDouble("berat_sapi");
-            umur = rs.getDouble("umur_sapi");
+            umur = rs.getString("tanggal_masuk_sapi");
         }
         return berat;
     }
@@ -230,7 +230,7 @@ public class m_sapi extends modelInheritance {
     public DefaultTableModel getTableLaporan() throws SQLException {
         String header[] = {"Nomor Sapi", "Jenis Sapi", "Umur Sapi", "Berat Sapi", "Saran"};
         DefaultTableModel tabelModel = new DefaultTableModel(null, header);
-        ResultSet rs = kon.getResult("select s.id_sapi, j.jenis_sapi, s.umur_sapi, s.berat_sapi, sr.saran from sapi s join jenis_sapi j on s.id_jenis_sapi=j.id_jenis_sapi join saran sr on sr.id_saran=s.id_saran");
+        ResultSet rs = kon.getResult("select s.id_sapi, j.jenis_sapi, s.tanggal_masuk_sapi, s.berat_sapi, sr.saran from sapi s join jenis_sapi j on s.id_jenis_sapi=j.id_jenis_sapi join saran sr on sr.id_saran=s.id_saran");
         for (int i = tabelModel.getRowCount() - 1; i >= 0; i--) {
             tabelModel.removeRow(i);
         }

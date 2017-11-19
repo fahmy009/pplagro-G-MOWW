@@ -41,10 +41,8 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
         btnHapusSapi = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableSapi = new javax.swing.JTable();
-        umurSapi = new javax.swing.JTextField();
         cbKandang = new javax.swing.JComboBox<>();
         cbJenisSapi = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -90,10 +88,6 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 590, 200));
 
-        umurSapi.setBorder(null);
-        umurSapi.setOpaque(false);
-        getContentPane().add(umurSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 210, 30));
-
         cbKandang.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbKandang.setBorder(null);
         getContentPane().add(cbKandang, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, 210, 30));
@@ -101,9 +95,6 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
         cbJenisSapi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbJenisSapi.setBorder(null);
         getContentPane().add(cbJenisSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 210, 30));
-
-        jLabel2.setText("umur");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, -1, -1));
 
         jLabel3.setText("kandang");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, -1, -1));
@@ -157,12 +148,10 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbJenisSapi;
     private javax.swing.JComboBox<String> cbKandang;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tableSapi;
-    private javax.swing.JTextField umurSapi;
     // End of variables declaration//GEN-END:variables
 
     public void btnTambah(ActionListener a) {
@@ -177,17 +166,8 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
         btnKembali.addActionListener(a);
     }
 
-    public JTextField getUmurSapi() {
-        return umurSapi;
-    }
-
     public JTable getTableSapi() {
         return tableSapi;
-    }
-
-    public void hapus() {
-        umurSapi.setText("");
-        cbKandang.setSelectedIndex(0);
     }
 
     public void setComboKandang(String[] comboAngkatan) {
@@ -210,4 +190,5 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
         return cbJenisSapi;
     }
 
+    
 }
