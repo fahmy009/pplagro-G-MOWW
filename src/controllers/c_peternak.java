@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import models.m_sapi;
+import models.m_sapi_new;
 import models.m_user;
 import models.m_validasi;
 import views.V_LAPORAN_NEW;
@@ -58,12 +59,13 @@ public class c_peternak {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
-                c_laporan_new a = new c_laporan_new(new V_LAPORAN_NEW(), new m_sapi());
+                c_laporan_new a = new c_laporan_new(new V_LAPORAN_NEW(), new m_sapi_new());
+//                c_laporan a = new c_laporan(new v_LAPORAN(), new m_sapi());
                 view.dispose();
             } catch (SQLException ex) {
                 Logger.getLogger(c_peternak.class.getName()).log(Level.SEVERE, null, ex);
             }
-            
+
         }
 
     }
@@ -78,7 +80,7 @@ public class c_peternak {
             } catch (SQLException ex) {
                 Logger.getLogger(c_peternak.class.getName()).log(Level.SEVERE, null, ex);
             }
-            
+
         }
     }
 

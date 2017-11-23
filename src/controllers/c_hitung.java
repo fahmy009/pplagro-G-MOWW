@@ -45,8 +45,9 @@ public class c_hitung {
         @Override
         public void actionPerformed(ActionEvent e) {
             try {
-                model.update(Double.toString(hasil), (String) view.getNomorSapi().getSelectedItem());
-                System.out.println(Double.toString(hasil) +" "+ (String) view.getNomorSapi().getSelectedItem());
+                int hasilP = (int) Math.round(hasil);
+                model.update(Integer.toString(hasilP), (String) view.getNomorSapi().getSelectedItem());
+//                System.out.println(Double.toString(hasil) +" "+ (String) view.getNomorSapi().getSelectedItem());
                 view.getTableSapi().setModel(model.getTable());
                 view.getNomorSapi().setSelectedIndex(0);
                 view.getLingkarDada().setText("");
@@ -85,7 +86,8 @@ public class c_hitung {
             String regex = "\\d+";
             if (view.getLingkarDada().getText().matches(regex)) {
                 hasil = (Math.pow((Double.valueOf(view.getLingkarDada().getText()) + 22), 2)) / 100;
-                view.getHasilHitungan().setText(Double.toString(hasil));
+                int hasilP = (int) Math.round(hasil);
+                view.getHasilHitungan().setText(Integer.toString(hasilP));
             } else {
                 view.getLingkarDada().setText("");
                 JOptionPane.showMessageDialog(view, "Silahkan Masukkan Angka dengan Benar");

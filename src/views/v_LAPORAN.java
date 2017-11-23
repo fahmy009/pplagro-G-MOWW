@@ -56,11 +56,6 @@ public class v_LAPORAN extends javax.swing.JFrame {
         btnHitung = new javax.swing.JButton();
         cek = new javax.swing.JCheckBox();
         cek2 = new javax.swing.JCheckBox();
-        lberat = new javax.swing.JLabel();
-        lumur = new javax.swing.JLabel();
-        lpakan = new javax.swing.JLabel();
-        lvaksin = new javax.swing.JLabel();
-        lvitamin = new javax.swing.JLabel();
         lnomor = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -134,21 +129,6 @@ public class v_LAPORAN extends javax.swing.JFrame {
         cek2.setContentAreaFilled(false);
         getContentPane().add(cek2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 530, 20, 44));
 
-        lberat.setText("BERAT SAPI");
-        getContentPane().add(lberat, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 86, -1, -1));
-
-        lumur.setText("UMUR SAPI");
-        getContentPane().add(lumur, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 144, -1, -1));
-
-        lpakan.setText("PAKAN");
-        getContentPane().add(lpakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 199, -1, -1));
-
-        lvaksin.setText("VAKSIN");
-        getContentPane().add(lvaksin, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 349, -1, -1));
-
-        lvitamin.setText("VITAMIN");
-        getContentPane().add(lvitamin, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 274, -1, -1));
-
         lnomor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/peternak-sppk.png"))); // NOI18N
         lnomor.setText("NOMOR SAPI");
         getContentPane().add(lnomor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
@@ -204,12 +184,7 @@ public class v_LAPORAN extends javax.swing.JFrame {
     private javax.swing.JCheckBox cek2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JLabel lberat;
     private javax.swing.JLabel lnomor;
-    private javax.swing.JLabel lpakan;
-    private javax.swing.JLabel lumur;
-    private javax.swing.JLabel lvaksin;
-    private javax.swing.JLabel lvitamin;
     private javax.swing.JTextArea saran;
     private javax.swing.JTable tableSapi;
     private javax.swing.JTextField umurSapi;

@@ -44,14 +44,16 @@ public class c_user {
                     JOptionPane.showMessageDialog(view, "Username dan Password tidak Boleh Kosong");
                     view.getUsername().setText("");
                     view.getPassword().setText("");
-                } else {
-                    if (model.level_user.equalsIgnoreCase("admin")) {
-                        c_admin a = new c_admin(new v_ADMIN());
-                        view.dispose();
-                    } else if (model.level_user.equalsIgnoreCase("peternak")) {
-                        c_peternak a = new c_peternak(new v_PETERNAK());
-                        view.dispose();
-                    }
+                } else if (model.level_user.equalsIgnoreCase("")) {
+                    JOptionPane.showMessageDialog(view, "Pastikan username dan password benar !!!");
+                    view.getUsername().setText("");
+                    view.getPassword().setText("");
+                } else if (model.level_user.equalsIgnoreCase("admin")) {
+                    c_admin a = new c_admin(new v_ADMIN());
+                    view.dispose();
+                } else if (model.level_user.equalsIgnoreCase("peternak")) {
+                    c_peternak a = new c_peternak(new v_PETERNAK());
+                    view.dispose();
                 }
             } catch (SQLException ex) {
                 JOptionPane.showMessageDialog(view, "Username dan Password tidak Boleh Kosong");
