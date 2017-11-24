@@ -45,7 +45,9 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
         cbJenisSapi = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -97,11 +99,15 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
         getContentPane().add(cbJenisSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 210, 30));
 
         jLabel3.setText("kandang");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, -1, -1));
 
         jLabel4.setText("jenis");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, -1));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 210, 30));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 500));
+
+        jLabel2.setText("umur");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -148,9 +154,11 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbJenisSapi;
     private javax.swing.JComboBox<String> cbKandang;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTable tableSapi;
     // End of variables declaration//GEN-END:variables
 
@@ -189,6 +197,12 @@ public class v_ADMINSAPI extends javax.swing.JFrame {
     public JComboBox<String> getCbJenisSapi() {
         return cbJenisSapi;
     }
+
+    public JTextField getUmur() {
+        return jTextField1;
+    }
+    
+    
 
     
 }

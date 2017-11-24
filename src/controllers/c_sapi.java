@@ -89,7 +89,6 @@ public class c_sapi {
         }
     }
 
-
     private class btnHapus implements ActionListener {
 
         @Override
@@ -121,14 +120,17 @@ public class c_sapi {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (view.getCbKandang().getSelectedIndex() == 0) {
+            if (view.getCbKandang().getSelectedIndex() == 0 && view.getUmur().getText().isEmpty() && view.getCbJenisSapi().getSelectedIndex() == 0) {
                 JOptionPane.showMessageDialog(view, "Silahkan Dicek dan Diisi Kembali");
             } else {
                 try {
-                    model.save("NULL,NULL,now(),NULL,NULL,NULL,NULL,NULL," + view.getCbKandang().getSelectedItem() + "," + view.getCbJenisSapi().getSelectedIndex());
+                    model.save("NULL,NULL,'" + view.getUmur().getText() + "',NULL,NULL,NULL,NULL,NULL," + view.getCbKandang().getSelectedItem() + "," + view.getCbJenisSapi().getSelectedIndex());
                     view.getTableSapi().setModel(model.getTable());
+                    view.getUmur().setText("");
+                    view.getCbJenisSapi().setSelectedIndex(0);
+                    view.getCbKandang().setSelectedIndex(0);
                 } catch (SQLException ex) {
-                    Logger.getLogger(c_sapi.class.getName()).log(Level.SEVERE, null, ex);
+
                 }
             }
         }

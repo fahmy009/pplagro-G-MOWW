@@ -593,8 +593,12 @@ public class V_LAPORAN_NEW extends javax.swing.JFrame {
         jumlahVitamin1.addKeyListener(a);
     }
 
-    public void jumlahTotal(KeyListener a) {
+    public void jumlahVitamin3(KeyListener a) {
         jumlahVitamin2.addKeyListener(a);
+    }
+    
+    public void jumlahVaksin(KeyListener a) {
+        jumlahVaksin.addKeyListener(a);
     }
 
     public void erase() {

@@ -6,6 +6,7 @@
 package views;
 
 import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
 import javax.swing.JFrame;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
@@ -79,6 +80,7 @@ public class v_VALIDASI extends javax.swing.JFrame {
 
         saran.setEditable(false);
         saran.setColumns(20);
+        saran.setLineWrap(true);
         saran.setRows(5);
         jScrollPane2.setViewportView(saran);
 
@@ -142,6 +144,10 @@ public class v_VALIDASI extends javax.swing.JFrame {
 
     public JTable getTabelValidasi() {
         return tabelValidasi;
+    }
+    
+    public void getData(MouseListener a) {
+        tabelValidasi.addMouseListener(a);
     }
 
     public void getBtnValidasi(ActionListener a) {

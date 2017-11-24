@@ -30,6 +30,7 @@ public class m_sapi_new extends modelInheritance {
     public static String pk2;
     public static String bk3;
     public static String pk3;
+    public static double h;
 
     public m_sapi_new() throws SQLException {
         super();
@@ -135,6 +136,14 @@ public class m_sapi_new extends modelInheritance {
         }
     }
 
+    public double harga(String nama) throws SQLException {
+        String query = "SELECT harga FROM nama_makanan WHERE nama_makanan='" + nama + "'";
+        ResultSet rs = kon.getResult(query);
+        while (rs.next()) {
+            h = rs.getDouble("harga");
+        }
+        return h;
+    }
 
     public static String getBk() {
         return bk1;
@@ -254,7 +263,7 @@ public class m_sapi_new extends modelInheritance {
     public DefaultTableModel getTableLaporan() throws SQLException {
         String header[] = {"Nomor Sapi", "Jenis Sapi", "Umur Sapi", "Berat Sapi", "Saran"};
         DefaultTableModel tabelModel = new DefaultTableModel(null, header);
-        ResultSet rs = kon.getResult("select s.id_sapi, j.jenis_sapi, s.umur, s.berat_sapi, sr.saran from sapi s join jenis_sapi j on s.id_jenis_sapi=j.id_jenis_sapi join saran sr on sr.id_saran=s.id_saran");
+        ResultSet rs = kon.getResult("select s.id_sapi, j.jenis_sapi, s.umur, s.berat_sapi, s.saran from sapi s join jenis_sapi j on s.id_jenis_sapi=j.id_jenis_sapi");
         for (int i = tabelModel.getRowCount() - 1; i >= 0; i--) {
             tabelModel.removeRow(i);
         }
@@ -269,4 +278,8 @@ public class m_sapi_new extends modelInheritance {
         return tabelModel;
     }
 
+    public boolean update2(String query, String id) throws SQLException {
+        String queries = "UPDATE sapi SET saran=" + query + ", id_validasi=3 WHERE id_sapi=" + id;
+        return super.update(queries); //To change body of generated methods, choose Tools | Templates.
+    }
 }

@@ -30,7 +30,7 @@ public class m_validasi extends modelInheritance {
     public DefaultTableModel getTable() throws SQLException {
         String header[] = {"Nomor Sapi", "Validasi", "Saran"};
         DefaultTableModel tabelModel = new DefaultTableModel(null, header);
-        ResultSet rs = kon.getResult("SELECT s.id_sapi, v.validasi, sr.saran from sapi s join validasi v on s.id_validasi=v.id_validasi join saran sr on s.id_saran=sr.id_saran");
+        ResultSet rs = kon.getResult("SELECT s.id_sapi, v.validasi, s.saran from sapi s join validasi v on s.id_validasi=v.id_validasi");
         for (int i = tabelModel.getRowCount() - 1; i >= 0; i--) {
             tabelModel.removeRow(i);
         }

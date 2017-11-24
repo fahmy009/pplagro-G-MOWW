@@ -30,6 +30,13 @@ public class c_laporan_new {
     m_sapi_new model2;
     public int jumlah = 0;
     String regex = "\\d+";
+    float kb_pakan1;
+    float kb_pakan2;
+    float kb_pakan3;
+    float kb_vitamin1;
+    float kb_vitamin2;
+    float kb_vitamin3;
+    float kb_vaksin1;
 
     public c_laporan_new(V_LAPORAN_NEW view, m_sapi_new model) throws SQLException {
         this.view = view;
@@ -64,6 +71,33 @@ public class c_laporan_new {
         view.jumlahP3(new jumlahP3());
         view.jumlahVitamin1(new jumlahVitamin());
         view.jumlahVitamin2(new jumlahVitamin2());
+        view.jumlahVitamin3(new jumlahVitamin3());
+        view.jumlahVaksin(new jumlahVaksin());
+    }
+
+    private class jumlahVaksin implements KeyListener {
+
+        @Override
+        public void keyTyped(KeyEvent e) {
+        }
+
+        @Override
+        public void keyPressed(KeyEvent e) {
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {
+            if (view.getJumlahVitamin2().getText().matches(regex)) {
+                if (Integer.valueOf(view.getJumlahVitamin2().getText()) > 150) {
+                    JOptionPane.showMessageDialog(view, "Vaksin Maksimal 150 ML / Vitaminnya Silahkan Masukkan Kembali Vitaminnya");
+                    view.getJumlahVaksin().setText("");
+                }
+            } else {
+                JOptionPane.showMessageDialog(view, "Mohon Untuk Memasukkan Karakter Angka");
+                view.getJumlahVaksin().setText("");
+            }
+        }
+
     }
 
     private class jumlahVitamin3 implements KeyListener {
@@ -380,6 +414,7 @@ public class c_laporan_new {
             float p_konsentrat = (float) (0.14 * bahan_kering);
             float hijauan = (float) (0.2 * bahan_kering); //20% * 3 = 20 : 20 : 20 (makanan)
             float konsentrat_30 = (float) (0.3 * bahan_kering);//10% * 3 = 10 : 10 : 10 (vitamin)
+            float bk_konsentrat = (float) (0.4 * bahan_kering);//10% * 3 = 10 : 10 : 10 (vitamin)
             float konsentrat = (float) (0.1 * bahan_kering);//10% * 3 = 10 : 10 : 10 (vitamin)
             float vaksin = (float) (0.1 * bahan_kering);//10% vaksin
 
@@ -387,40 +422,61 @@ public class c_laporan_new {
 
                 //pakan
                 model2.makanan((String) view.getCbPakan1().getSelectedItem());
+                model2.harga((String) view.getCbPakan1().getSelectedItem());
                 String bk_pakan1 = m_sapi_new.getBk();
                 String pk_pakan1 = m_sapi_new.getPk();
+                double h_pakan1 = m_sapi_new.h;
+                float harga_pakan1 = (float) (kb_pakan1 * h_pakan1);
                 float pk_makanan1 = (Float.valueOf(pk_pakan1) / 100) * hijauan;
 
                 model2.makanan((String) view.getCbPakan2().getSelectedItem());
+                model2.harga((String) view.getCbPakan1().getSelectedItem());
                 String bk_pakan2 = m_sapi_new.getBk();
                 String pk_pakan2 = m_sapi_new.getPk();
+                double h_pakan2 = m_sapi_new.h;
+                float harga_pakan2 = (float) (kb_pakan2 * h_pakan2);
                 float pk_makanan2 = (Float.valueOf(pk_pakan2) / 100) * hijauan;
 
                 model2.makanan((String) view.getCbPakan3().getSelectedItem());
+                model2.harga((String) view.getCbPakan1().getSelectedItem());
                 String bk_pakan3 = m_sapi_new.getBk();
                 String pk_pakan3 = m_sapi_new.getPk();
+                double h_pakan3 = m_sapi_new.h;
+                float harga_pakan3 = (float) (kb_pakan3 * h_pakan3);
                 float pk_makanan3 = (Float.valueOf(pk_pakan3) / 100) * hijauan;
 
                 // end of pakan
                 // vitamin
                 model2.makanan((String) view.getCbVitamin().getSelectedItem());
+                model2.harga((String) view.getCbPakan1().getSelectedItem());
                 String bk_vitamin1 = m_sapi_new.getBk();
                 String pk_vitamin1 = m_sapi_new.getPk();
+                double h_vitamin1 = m_sapi_new.h;
+                float harga_vitamin1 = (float) (kb_vitamin1 * h_vitamin1);
                 float pk_vita1 = (Float.valueOf(pk_vitamin1) / 100) * konsentrat;
 
                 model2.makanan((String) view.getCbVitamin1().getSelectedItem());
+                model2.harga((String) view.getCbPakan1().getSelectedItem());
                 String bk_vitamin2 = m_sapi_new.getBk();
                 String pk_vitamin2 = m_sapi_new.getPk();
+                double h_vitamin2 = m_sapi_new.h;
+                float harga_vitamin2 = (float) (kb_vitamin2 * h_vitamin2);
                 float pk_vita2 = (Float.valueOf(pk_vitamin2) / 100) * konsentrat;
 
                 model2.makanan((String) view.getCbVitamin2().getSelectedItem());
+                model2.harga((String) view.getCbPakan1().getSelectedItem());
                 String bk_vitamin3 = m_sapi_new.getBk();
                 String pk_vitamin3 = m_sapi_new.getPk();
+                double h_vitamin3 = m_sapi_new.h;
+                float harga_vitamin3 = (float) (kb_vitamin3 * h_vitamin3);
                 float pk_vita3 = (Float.valueOf(pk_vitamin3) / 100) * konsentrat;
 
                 model2.makanan((String) view.getCbVitamin2().getSelectedItem());
+                model2.harga((String) view.getCbPakan1().getSelectedItem());
                 String bk_vaksin = m_sapi_new.getBk();
                 String pk_vaksin = m_sapi_new.getPk();
+                double h_vaksin = m_sapi_new.h;
+                float harga_vaksin = (float) (kb_vaksin1 * h_vaksin);
                 float pk_vaksinasi = (Float.valueOf(pk_vaksin) / 100) * vaksin;
 
 // end of vitamin
@@ -455,6 +511,7 @@ public class c_laporan_new {
                 float persentaseC = Math.round(Math.abs(persentaseBawah) * jumlahC);
 
                 float permisalanB = Math.round(persentaseB + persentaseC);
+
                 float hasil = permisalanB + persentaseA;
 
                 float hasilSebelum = permisalanB + persentaseA;
@@ -466,28 +523,158 @@ public class c_laporan_new {
                 int kondisi4 = rand.nextInt((100 - 80) + 1) + 80;
                 int kondisi5 = rand.nextInt((200 - 100) + 1) + 100;
 
-                System.out.println("KOndisi 1 = " + kondisi1);
-                System.out.println("KOndisi 2 = " + kondisi2);
-                System.out.println("KOndisi 3 = " + kondisi3);
-                System.out.println("KOndisi 4 = " + kondisi4);
-                System.out.println("KOndisi 5 = " + kondisi5);
-
                 if (hasil < 150) {
                     hasil = kondisi1;
                 } else if (hasil > 150 && hasil < 300) {
                     hasil = kondisi2;
                 } else if (hasil > 300 && hasil < 400) {
                     hasil = kondisi3;
-                } else if (hasil > 400 && hasil < 550) {
+                } else if (hasil > 400 && hasil < 1200) {
                     hasil = kondisi4;
                 } else {
                     hasil = kondisi5;
                 }
 
-                view.getSaran().setText("Persentase Atas = " + persentaseA + " Persentase Bawah = " + permisalanB + " Hasil Tanpa Random : " + hasilSebelum + " Hasilnya : " + hasil);
+                String pertumbuhan = null;
+                int pertumbuhan1 = 0;
+
+                if (Float.valueOf(view.getBeratSapi().getText()) > 300 && Float.valueOf(view.getBeratSapi().getText()) < 600 && view.getJenisSapi().getText().equalsIgnoreCase("") && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
+                    pertumbuhan = "0.6 - 0.8";
+                    pertumbuhan1 = (int) (rand.nextInt((int) ((0.8 - 0.6) + 0.8)) + 0.6);
+                } else if (Float.valueOf(view.getBeratSapi().getText()) > 400 && Float.valueOf(view.getBeratSapi().getText()) < 600 && view.getJenisSapi().getText().equalsIgnoreCase("bali") && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
+                    pertumbuhan = "0.6 - 0.8";
+                    pertumbuhan1 = (int) (rand.nextInt((int) ((0.8 - 0.6) + 0.8)) + 0.6);
+                } else if (Float.valueOf(view.getBeratSapi().getText()) > 250 && Float.valueOf(view.getBeratSapi().getText()) < 300 && view.getJenisSapi().getText().equalsIgnoreCase("madura") && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
+                    pertumbuhan = "0.3 - 0.6";
+                    pertumbuhan1 = (int) (rand.nextInt((int) ((0.6 - 0.3) + 0.6)) + 0.3);
+                } else if (Float.valueOf(view.getBeratSapi().getText()) < 800 && view.getJenisSapi().getText().equalsIgnoreCase("brahma") && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
+                    pertumbuhan = "0.8 - 1.2";
+                    pertumbuhan1 = (int) (rand.nextInt((int) ((1.2 - 0.8) + 1.2)) + 0.8);
+                } else if (Float.valueOf(view.getBeratSapi().getText()) > 800 && Float.valueOf(view.getBeratSapi().getText()) < 1200 && view.getJenisSapi().getText().equalsIgnoreCase("limousin") && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
+                    pertumbuhan = "1.2 - 1.4";
+                    pertumbuhan1 = (int) (rand.nextInt((int) ((1.4 - 1.2) + 1.4)) + 1.2);
+                } else if (Float.valueOf(view.getBeratSapi().getText()) > 800 && Float.valueOf(view.getBeratSapi().getText()) < 1000 && view.getJenisSapi().getText().equalsIgnoreCase("Aberdeen Angus") && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
+                    pertumbuhan = "1 - 1.2";
+                    pertumbuhan1 = rand.nextInt((int) ((1.2 - 1) + 1.2)) + 1;
+                } else if (Float.valueOf(view.getBeratSapi().getText()) > 800 && Float.valueOf(view.getBeratSapi().getText()) < 1000 && view.getJenisSapi().getText().equalsIgnoreCase("Simmental") && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
+                    pertumbuhan = "1.2 - 1.4";
+                    pertumbuhan1 = (int) (rand.nextInt((int) ((1.4 - 1.2) + 1.4)) + 1.2);
+                } else if (Float.valueOf(view.getBeratSapi().getText()) > 200 && Float.valueOf(view.getBeratSapi().getText()) < 500 && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
+                    pertumbuhan = "0.1 - 0.4";
+                    pertumbuhan1 = (int) (rand.nextInt((int) ((0.4 - 0.1) + 0.4)) + 0.1);
+                } else if (Float.valueOf(view.getBeratSapi().getText()) > 500 && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
+                    pertumbuhan = "0.6 - 0.8";
+                    pertumbuhan1 = (int) (rand.nextInt((int) ((0.8 - 0.6) + 0.8)) + 0.6);
+                }
+
+                float atas = persentaseA * bk_konsentrat;
+                float bawah = permisalanB * bk_konsentrat;
+
+                if (atas > 100 && bawah > 100) {
+                    atas = (float) (atas * 0.1);
+                    bawah = (float) (bawah * 0.1);
+                } else if (atas > 1000 && bawah > 1000) {
+                    atas = (float) (atas * 0.01);
+                    bawah = (float) (bawah * 0.01);
+                }
+
+                kb_pakan1 = (float) (0.6 * atas);
+                kb_pakan2 = (float) (0.6 * atas);
+                kb_pakan3 = (float) (0.6 * atas);
+                kb_vitamin1 = (float) (0.4 * bawah);
+                kb_vitamin2 = (float) (0.4 * bawah);
+                kb_vitamin3 = (float) (0.4 * bawah);
+                kb_vaksin1 = (float) (0.4 * bawah);
+
+                float harga_pakan = harga_pakan1 + harga_pakan2 + harga_pakan3;
+                float harga_vitamin = harga_vitamin1 + harga_vitamin2 + harga_vitamin3;
+                float harga_total = harga_pakan + harga_vitamin + harga_vaksin;
+
+                String saran1 = "pertumbuhan bobot sapi sangat kurang \n"
+                        + "    dengan pertumbuhan berat selama 1 bulan sebesar = " + (pertumbuhan1 * 30) + " KG\n"
+                        + "    kombinasi pakan, vaksin & vitamin sangat kurang memenuhi sehingga pertumbuhan sapi kecil sekali sehingga tidak sesuai dengan apa yang diharapkan.\n"
+                        + "    pilih jenis " + view.getCbPakan1().getSelectedItem() + " sebesar = " + kb_pakan1 + " kg\n"
+                        + "    pilih jenis " + view.getCbPakan2().getSelectedItem() + " sebesar = " + kb_pakan2 + " kg\n"
+                        + "    pilih jenis " + view.getCbPakan3().getSelectedItem() + " sebesar = " + kb_pakan3 + " kg\n"
+                        + "    pilih jenis " + view.getCbVitamin().getSelectedItem() + " sebesar = " + kb_vitamin1 + " kg\n"
+                        + "    pilih jenis " + view.getCbVitamin1().getSelectedItem() + " sebesar = " + kb_vitamin2 + " kg\n"
+                        + "    pilih jenis " + view.getCbVitamin2().getSelectedItem() + " sebesar = " + kb_vitamin3 + " kg\n"
+                        + "    pilih jenis " + view.getCbVaksin().getSelectedItem() + " sebesar = " + kb_vaksin1 + " ml\n"
+                        + "    dengan biaya pakan sebesar Rp. " + harga_pakan + " , vitamin sebesar Rp. " + harga_vitamin + " , dan vaksin sebesar Rp. " + harga_vaksin + " .\n"
+                        + "    sehingga biaya total dalam 1 Bulan sebesar = Rp. " + harga_total + " dengan harga daging sapi = Rp.110.000/Kg \n"
+                        + "    maka peternak akan mendapatkan keuntungan sebesar = Rp. " + Math.abs((((pertumbuhan1 * 30) * 110000) - (harga_pakan * 3))) + "/bulan";
+                String saran2 = "pertumbuhan bobot sapi kurang\n"
+                        + "    dengan pertumbuhan berat selama 1 bulan sebesar = " + (pertumbuhan1 * 30) + " KG\n"
+                        + "    kombinasi pakan, vaksin & vitamin kurang memenuhi sehingga pertumbuhan sapi tidak sesuai dengan apa yang diharapkan.\n"
+                        + "    pilih jenis " + view.getCbPakan1().getSelectedItem() + " sebesar = " + kb_pakan1 + " kg\n"
+                        + "    pilih jenis " + view.getCbPakan2().getSelectedItem() + " sebesar = " + kb_pakan2 + " kg\n"
+                        + "    pilih jenis " + view.getCbVitamin().getSelectedItem() + " sebesar = " + kb_vitamin1 + " kg\n"
+                        + "    pilih jenis " + view.getCbVitamin2().getSelectedItem() + " sebesar = " + kb_vitamin2 + " kg\n"
+                        + "    pilih jenis " + view.getCbVaksin().getSelectedItem() + " sebesar  = " + kb_vaksin1 + " ml\n"
+                        + "    dengan biaya pakan sebesar Rp. " + harga_pakan + " , vitamin sebesar Rp. " + harga_vitamin + " , dan vaksin sebesar Rp. " + harga_vaksin + " .\n"
+                        + "    sehingga biaya total dalam 1 Bulan sebesar = Rp. " + harga_total + " dengan harga daging sapi = Rp.110.000/Kg \n"
+                        + "    maka peternak akan mendapatkan keuntungan sebesar = Rp. " + Math.abs((((pertumbuhan1 * 30) * 110000) - (harga_pakan * 3))) + "/bulan";
+                String saran3 = "pertumbuhan bobot sapi normal\n"
+                        + "    dengan pertumbuhan berat selama 1 bulan sebesar = " + (pertumbuhan1 * 30) + " KG\n"
+                        + "    kombinasi pakan, vaksin & vitamin sudah memenuhi dengan apa yang diharapkan.\n"
+                        + "    dengan biaya pakan sebesar Rp. " + (harga_pakan * 0.1) + " , vitamin sebesar Rp. " + harga_vitamin + " , dan vaksin sebesar Rp. " + harga_vaksin + " .\n"
+                        + "    sehingga biaya total dalam 1 Bulan sebesar = Rp. 150000 dengan harga daging sapi = Rp.110.000/Kg \n"
+                        + "    maka peternak akan mendapatkan keuntungan sebesar = Rp. " + Math.abs((((pertumbuhan1 * 30) * 110000) - (harga_pakan * 3))) + "/bulan";
+                String saran4 = "sapi stress \n"
+                        + "    pertumbuhan bobot sapi menurun selama 1 bulan sebesar = " + (pertumbuhan1 * 30) + " KG\n"
+                        + "    kombinasi pakan, vaksin & vitamin melebihi batas maksimum sehingga mengakibatkan pertumbuhan sapi menurun drastis dan mengganggu kesehatan sapi.\n"
+                        + "    pilih jenis pakan, vitamin, & vaksin yang sesuai sehingga pertumbuhan sapi meningkat tiap bulannya";
+
+                if (hasil < 40) {
+                    view.getSaran().setText("pertumbuhan bobot sapi sangat kurang \n"
+                            + "    dengan pertumbuhan berat selama 1 bulan sebesar = " + (pertumbuhan1 * 30) + " KG\n"
+                            + "    kombinasi pakan, vaksin & vitamin sangat kurang memenuhi sehingga pertumbuhan sapi kecil sekali sehingga tidak sesuai dengan apa yang diharapkan.\n"
+                            + "    pilih jenis " + view.getCbPakan1().getSelectedItem() + " sebesar = " + kb_pakan1 + " kg\n"
+                            + "    pilih jenis " + view.getCbPakan2().getSelectedItem() + " sebesar = " + kb_pakan2 + " kg\n"
+                            + "    pilih jenis " + view.getCbPakan3().getSelectedItem() + " sebesar = " + kb_pakan3 + " kg\n"
+                            + "    pilih jenis " + view.getCbVitamin().getSelectedItem() + " sebesar = " + kb_vitamin1 + " kg\n"
+                            + "    pilih jenis " + view.getCbVitamin1().getSelectedItem() + " sebesar = " + kb_vitamin2 + " kg\n"
+                            + "    pilih jenis " + view.getCbVitamin2().getSelectedItem() + " sebesar = " + kb_vitamin3 + " kg\n"
+                            + "    pilih jenis " + view.getCbVaksin().getSelectedItem() + " sebesar = " + kb_vaksin1 + " ml\n"
+                            + "    dengan biaya pakan sebesar Rp. " + harga_pakan + " , vitamin sebesar Rp. " + harga_vitamin + " , dan vaksin sebesar Rp. " + harga_vaksin + " .\n"
+                            + "    sehingga biaya total dalam 1 Bulan sebesar = Rp. " + harga_total + " dengan harga daging sapi = Rp.110.000/Kg \n"
+                            + "    maka peternak akan mendapatkan keuntungan sebesar = Rp. " + Math.abs((((pertumbuhan1 * 30) * 110000) - (harga_pakan * 3))) + "/bulan");
+                    model2.update2("'" + saran1 + "'", (String) view.getNomorSapi().getSelectedItem());
+                    view.getTableSapi().setModel(model2.getTableLaporan());
+                } else if (hasil > 40 && hasil < 80) {
+                    view.getSaran().setText("pertumbuhan bobot sapi kurang\n"
+                            + "    dengan pertumbuhan berat selama 1 bulan sebesar = " + (pertumbuhan1 * 30) + " KG\n"
+                            + "    kombinasi pakan, vaksin & vitamin kurang memenuhi sehingga pertumbuhan sapi tidak sesuai dengan apa yang diharapkan.\n"
+                            + "    pilih jenis " + view.getCbPakan1().getSelectedItem() + " sebesar = " + kb_pakan1 + " kg\n"
+                            + "    pilih jenis " + view.getCbPakan2().getSelectedItem() + " sebesar = " + kb_pakan2 + " kg\n"
+                            + "    pilih jenis " + view.getCbVitamin().getSelectedItem() + " sebesar = " + kb_vitamin1 + " kg\n"
+                            + "    pilih jenis " + view.getCbVitamin2().getSelectedItem() + " sebesar = " + kb_vitamin2 + " kg\n"
+                            + "    pilih jenis " + view.getCbVaksin().getSelectedItem() + " sebesar  = " + kb_vaksin1 + " ml\n"
+                            + "    dengan biaya pakan sebesar Rp. " + harga_pakan + " , vitamin sebesar Rp. " + harga_vitamin + " , dan vaksin sebesar Rp. " + harga_vaksin + " .\n"
+                            + "    sehingga biaya total dalam 1 Bulan sebesar = Rp. " + harga_total + " dengan harga daging sapi = Rp.110.000/Kg \n"
+                            + "    maka peternak akan mendapatkan keuntungan sebesar = Rp. " + Math.abs((((pertumbuhan1 * 30) * 110000) - (harga_pakan * 3))) + "/bulan");
+                    model2.update2("'" + saran2 + "'", (String) view.getNomorSapi().getSelectedItem());
+                    view.getTableSapi().setModel(model2.getTableLaporan());
+                } else if (hasil > 80 && hasil < 100) {
+                    view.getSaran().setText("pertumbuhan bobot sapi normal\n"
+                            + "    dengan pertumbuhan berat selama 1 bulan sebesar = " + (pertumbuhan1 * 30) + " KG\n"
+                            + "    kombinasi pakan, vaksin & vitamin sudah memenuhi dengan apa yang diharapkan.\n"
+                            + "    dengan biaya pakan sebesar Rp. " + (harga_pakan * 0.1) + " , vitamin sebesar Rp. " + harga_vitamin + " , dan vaksin sebesar Rp. " + harga_vaksin + " .\n"
+                            + "    sehingga biaya total dalam 1 Bulan sebesar = Rp. 150000 dengan harga daging sapi = Rp.110.000/Kg \n"
+                            + "    maka peternak akan mendapatkan keuntungan sebesar = Rp. " + Math.abs((((pertumbuhan1 * 30) * 110000) - (harga_pakan * 3))) + "/bulan");
+                    model2.update2("'" + saran3 + "'", (String) view.getNomorSapi().getSelectedItem());
+                    view.getTableSapi().setModel(model2.getTableLaporan());
+                } else if (hasil > 100) {
+                    view.getSaran().setText("sapi stress \n"
+                            + "    pertumbuhan bobot sapi menurun selama 1 bulan sebesar = " + (pertumbuhan1 * 30) + " KG\n"
+                            + "    kombinasi pakan, vaksin & vitamin melebihi batas maksimum sehingga mengakibatkan pertumbuhan sapi menurun drastis dan mengganggu kesehatan sapi.\n"
+                            + "    pilih jenis pakan, vitamin, & vaksin yang sesuai sehingga pertumbuhan sapi meningkat tiap bulannya");
+                    model2.update2("'" + saran4 + "'", (String) view.getNomorSapi().getSelectedItem());
+                    view.getTableSapi().setModel(model2.getTableLaporan());
+                }
 
             } catch (SQLException ex) {
-                Logger.getLogger(c_laporan_new.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("ERROR");
             }
 
             view.erase();
