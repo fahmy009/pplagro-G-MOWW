@@ -43,6 +43,12 @@ public class v_MAKANAN extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tableMakanan = new javax.swing.JTable();
         cbMakanan = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -88,6 +94,24 @@ public class v_MAKANAN extends javax.swing.JFrame {
         cbMakanan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbMakanan.setBorder(null);
         getContentPane().add(cbMakanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 250, 380, 70));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/admin sapi2.png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 94, 250, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/b.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 560, 10));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/admin pakan.png"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 10, 240, 70));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/b.png"))); // NOI18N
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, 880, 10));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/admin pakan.png"))); // NOI18N
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 100, 10));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/a.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 250, 20));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/admin-makanan.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
@@ -137,6 +161,12 @@ public class v_MAKANAN extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbJjenisMakanan;
     private javax.swing.JComboBox<String> cbMakanan;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tableMakanan;
     // End of variables declaration//GEN-END:variables

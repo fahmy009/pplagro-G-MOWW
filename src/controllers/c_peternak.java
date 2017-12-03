@@ -19,9 +19,9 @@ import views.v_ADMINSAPI;
 import views.v_LOGIN;
 import views.v_PENGHITUNG;
 import views.v_PETERNAK;
-import views.v_LAPORAN;
 import views.v_VALIDASI;
 import views.v_VALIDASI_P;
+import views.v_rangking;
 
 /**
  *
@@ -38,6 +38,21 @@ public class c_peternak {
         view.getBtnValidasi(new btnValidasi());
         view.getBtnPenghitung(new btnHitung());
         view.getBtnLogout(new btnLogout());
+        view.getBtnRangking(new btnRangking());
+    }
+
+    private class btnRangking implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            try {
+                c_rangking a = new c_rangking(new v_rangking(), new m_sapi_new());
+                view.dispose();
+            } catch (SQLException ex) {
+                Logger.getLogger(c_peternak.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
     }
 
     private class btnHitung implements ActionListener {

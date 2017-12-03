@@ -282,4 +282,23 @@ public class m_sapi_new extends modelInheritance {
         String queries = "UPDATE sapi SET saran=" + query + ", id_validasi=3 WHERE id_sapi=" + id;
         return super.update(queries); //To change body of generated methods, choose Tools | Templates.
     }
+    
+     public DefaultTableModel getTableRangking() throws SQLException {
+        String header[] = {"Nomor Sapi", "Jenis Sapi", "Umur Sapi", "Berat Sapi", "Rangking"};
+        DefaultTableModel tabelModel = new DefaultTableModel(null, header);
+        kon.execute("SET @rank=0;");
+        ResultSet rs = kon.getResult("SELECT s.id_sapi, j.jenis_sapi, s.umur, s.berat_sapi, @rank:=@rank+1 FROM sapi s join jenis_sapi j on s.id_jenis_sapi=j.id_jenis_sapi ORDER BY berat_sapi DESC");
+        for (int i = tabelModel.getRowCount() - 1; i >= 0; i--) {
+            tabelModel.removeRow(i);
+        }
+        while (rs.next()) {
+            String kolom[] = new String[5];
+            for (int i = 0; i < kolom.length; i++) {
+                kolom[i] = rs.getString(i + 1);
+            }
+
+            tabelModel.addRow(kolom);
+        }
+        return tabelModel;
+    }
 }

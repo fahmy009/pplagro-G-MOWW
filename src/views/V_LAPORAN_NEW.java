@@ -51,51 +51,34 @@ public class V_LAPORAN_NEW extends javax.swing.JFrame {
         btnHitung = new javax.swing.JButton();
         cekP1 = new javax.swing.JCheckBox();
         cekVaksin = new javax.swing.JCheckBox();
-        lberat = new javax.swing.JLabel();
-        lumur = new javax.swing.JLabel();
-        lpakan = new javax.swing.JLabel();
-        lvaksin = new javax.swing.JLabel();
-        lvitamin = new javax.swing.JLabel();
         cekVitamin = new javax.swing.JCheckBox();
         umurSapi = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
         jumlahP2 = new javax.swing.JTextField();
         cbPakan2 = new javax.swing.JComboBox<>();
         cekP2 = new javax.swing.JCheckBox();
-        lpakan1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jumlahP3 = new javax.swing.JTextField();
         cbPakan3 = new javax.swing.JComboBox<>();
         cekP3 = new javax.swing.JCheckBox();
-        lpakan2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jumlahVitamin = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
         jumlahVaksin = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        lberat1 = new javax.swing.JLabel();
         nomorSapi = new javax.swing.JComboBox<>();
         jenisSapi = new javax.swing.JTextField();
         jumlahVitamin1 = new javax.swing.JTextField();
         cbVitamin1 = new javax.swing.JComboBox<>();
-        jLabel6 = new javax.swing.JLabel();
         cekVitamin1 = new javax.swing.JCheckBox();
-        lvitamin1 = new javax.swing.JLabel();
         cbVitamin2 = new javax.swing.JComboBox<>();
         cekVitamin2 = new javax.swing.JCheckBox();
-        lvitamin3 = new javax.swing.JLabel();
         jumlahVitamin2 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        lberat1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnKembali.setText("KEMBALI");
         btnKembali.setBorder(null);
         btnKembali.setBorderPainted(false);
         btnKembali.setContentAreaFilled(false);
-        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 700, 150, 50));
+        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 690, 150, 50));
 
         tableSapi.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -112,19 +95,19 @@ public class V_LAPORAN_NEW extends javax.swing.JFrame {
         tableSapi.setGridColor(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(tableSapi);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 20, 740, 290));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 120, 530, 290));
 
         beratSapi.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         beratSapi.setEnabled(false);
-        getContentPane().add(beratSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 360, 30));
+        getContentPane().add(beratSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, 370, 50));
 
         jumlahP1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jumlahP1.setEnabled(false);
-        getContentPane().add(jumlahP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 50, 30));
+        getContentPane().add(jumlahP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 70, 50));
 
         cbPakan1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbPakan1.setEnabled(false);
-        getContentPane().add(cbPakan1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 230, 30));
+        getContentPane().add(cbPakan1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 320, 240, 50));
 
         saran.setEditable(false);
         saran.setColumns(20);
@@ -134,158 +117,103 @@ public class V_LAPORAN_NEW extends javax.swing.JFrame {
         saran.setName(""); // NOI18N
         jScrollPane2.setViewportView(saran);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 330, 740, 240));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 440, 530, 210));
 
         cbVitamin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbVitamin.setEnabled(false);
-        getContentPane().add(cbVitamin, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, 230, 30));
+        getContentPane().add(cbVitamin, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 500, 240, 50));
 
         cbVaksin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbVaksin.setEnabled(false);
-        getContentPane().add(cbVaksin, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 660, 230, 30));
+        getContentPane().add(cbVaksin, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 680, 240, 50));
 
-        btnHitung.setText("UPDATE");
         btnHitung.setBorder(null);
         btnHitung.setBorderPainted(false);
         btnHitung.setContentAreaFilled(false);
-        getContentPane().add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 690, 270, 60));
+        getContentPane().add(btnHitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 680, 270, 60));
 
         cekP1.setBorder(null);
         cekP1.setContentAreaFilled(false);
-        getContentPane().add(cekP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 30, 30));
+        getContentPane().add(cekP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, 30, 50));
 
         cekVaksin.setBorder(null);
         cekVaksin.setContentAreaFilled(false);
-        getContentPane().add(cekVaksin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 660, 30, 30));
-
-        lberat.setText("BERAT SAPI");
-        getContentPane().add(lberat, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 114, 70, 30));
-
-        lumur.setText("UMUR SAPI");
-        getContentPane().add(lumur, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 194, 70, 30));
-
-        lpakan.setText("PAKAN 1");
-        getContentPane().add(lpakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 60, 30));
-
-        lvaksin.setText("VAKSIN");
-        getContentPane().add(lvaksin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 660, 50, 30));
-
-        lvitamin.setText("VITAMIN 1");
-        getContentPane().add(lvitamin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 80, 50));
+        getContentPane().add(cekVaksin, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 680, 30, 50));
 
         cekVitamin.setBorder(null);
         cekVitamin.setContentAreaFilled(false);
-        getContentPane().add(cekVitamin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 460, 30, 30));
+        getContentPane().add(cekVitamin, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 500, 30, 50));
 
         umurSapi.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         umurSapi.setEnabled(false);
-        getContentPane().add(umurSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 360, 30));
-
-        jLabel1.setFont(new java.awt.Font("Tekton Pro Cond", 0, 36)); // NOI18N
-        jLabel1.setText("KG");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 240, 50, 30));
+        getContentPane().add(umurSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, 370, 50));
 
         jumlahP2.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jumlahP2.setEnabled(false);
-        getContentPane().add(jumlahP2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 310, 50, 30));
+        getContentPane().add(jumlahP2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, 70, 50));
 
         cbPakan2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbPakan2.setEnabled(false);
-        getContentPane().add(cbPakan2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 230, 30));
+        getContentPane().add(cbPakan2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, 240, 50));
 
         cekP2.setBorder(null);
         cekP2.setContentAreaFilled(false);
-        getContentPane().add(cekP2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 30, 30));
-
-        lpakan1.setText("PAKAN 2");
-        getContentPane().add(lpakan1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 60, 30));
-
-        jLabel2.setFont(new java.awt.Font("Tekton Pro Cond", 0, 36)); // NOI18N
-        jLabel2.setText("KG");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, 50, 30));
+        getContentPane().add(cekP2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, 30, 50));
 
         jumlahP3.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jumlahP3.setEnabled(false);
-        getContentPane().add(jumlahP3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 390, 50, 30));
+        getContentPane().add(jumlahP3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 440, 70, 50));
 
         cbPakan3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbPakan3.setEnabled(false);
-        getContentPane().add(cbPakan3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 230, 30));
+        getContentPane().add(cbPakan3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 440, 240, 50));
 
         cekP3.setBorder(null);
         cekP3.setContentAreaFilled(false);
-        getContentPane().add(cekP3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, 30, 30));
-
-        lpakan2.setText("PAKAN 3");
-        getContentPane().add(lpakan2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 60, 30));
-
-        jLabel3.setFont(new java.awt.Font("Tekton Pro Cond", 0, 36)); // NOI18N
-        jLabel3.setText("KG");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, 50, 30));
+        getContentPane().add(cekP3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 440, 30, 50));
 
         jumlahVitamin.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jumlahVitamin.setEnabled(false);
-        getContentPane().add(jumlahVitamin, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 460, 50, 30));
-
-        jLabel4.setFont(new java.awt.Font("Tekton Pro Cond", 0, 36)); // NOI18N
-        jLabel4.setText("KG");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 460, 50, 30));
+        getContentPane().add(jumlahVitamin, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 500, 70, 50));
 
         jumlahVaksin.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jumlahVaksin.setEnabled(false);
-        getContentPane().add(jumlahVaksin, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 660, 50, 30));
-
-        jLabel5.setFont(new java.awt.Font("Tekton Pro Cond", 0, 36)); // NOI18N
-        jLabel5.setText("ML");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 660, 50, 30));
-
-        lberat1.setText("NOMOR SAPI");
-        getContentPane().add(lberat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 34, 80, 30));
+        getContentPane().add(jumlahVaksin, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 680, 70, 50));
 
         nomorSapi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
-        getContentPane().add(nomorSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 60, 30));
+        getContentPane().add(nomorSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, 80, 50));
 
         jenisSapi.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jenisSapi.setEnabled(false);
-        getContentPane().add(jenisSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 270, 30));
+        getContentPane().add(jenisSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, 270, 50));
 
         jumlahVitamin1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jumlahVitamin1.setEnabled(false);
-        getContentPane().add(jumlahVitamin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 520, 50, 30));
+        getContentPane().add(jumlahVitamin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 560, 70, 50));
 
         cbVitamin1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbVitamin1.setEnabled(false);
-        getContentPane().add(cbVitamin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 520, 230, 30));
-
-        jLabel6.setFont(new java.awt.Font("Tekton Pro Cond", 0, 36)); // NOI18N
-        jLabel6.setText("KG");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 520, 50, 30));
+        getContentPane().add(cbVitamin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 560, 240, 50));
 
         cekVitamin1.setBorder(null);
         cekVitamin1.setContentAreaFilled(false);
-        getContentPane().add(cekVitamin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 520, 30, 30));
-
-        lvitamin1.setText("VITAMIN 2");
-        getContentPane().add(lvitamin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, 70, 50));
+        getContentPane().add(cekVitamin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 560, 30, 50));
 
         cbVitamin2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
         cbVitamin2.setEnabled(false);
-        getContentPane().add(cbVitamin2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 590, 230, 30));
+        getContentPane().add(cbVitamin2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 620, 240, 50));
 
         cekVitamin2.setBorder(null);
         cekVitamin2.setContentAreaFilled(false);
-        getContentPane().add(cekVitamin2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 590, 30, 30));
-
-        lvitamin3.setText("VITAMIN 3");
-        getContentPane().add(lvitamin3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 580, 70, 50));
+        getContentPane().add(cekVitamin2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 620, 30, 50));
 
         jumlahVitamin2.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jumlahVitamin2.setEnabled(false);
-        getContentPane().add(jumlahVitamin2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 590, 50, 30));
+        getContentPane().add(jumlahVitamin2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 620, 70, 50));
 
-        jLabel8.setFont(new java.awt.Font("Tekton Pro Cond", 0, 36)); // NOI18N
-        jLabel8.setText("KG");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 590, 50, 30));
+        lberat1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/peternak sppk.png"))); // NOI18N
+        lberat1.setText("NOMOR SAPI");
+        getContentPane().add(lberat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -343,13 +271,6 @@ public class V_LAPORAN_NEW extends javax.swing.JFrame {
     private javax.swing.JCheckBox cekVitamin;
     private javax.swing.JCheckBox cekVitamin1;
     private javax.swing.JCheckBox cekVitamin2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jenisSapi;
@@ -360,16 +281,7 @@ public class V_LAPORAN_NEW extends javax.swing.JFrame {
     private javax.swing.JTextField jumlahVitamin;
     private javax.swing.JTextField jumlahVitamin1;
     private javax.swing.JTextField jumlahVitamin2;
-    private javax.swing.JLabel lberat;
     private javax.swing.JLabel lberat1;
-    private javax.swing.JLabel lpakan;
-    private javax.swing.JLabel lpakan1;
-    private javax.swing.JLabel lpakan2;
-    private javax.swing.JLabel lumur;
-    private javax.swing.JLabel lvaksin;
-    private javax.swing.JLabel lvitamin;
-    private javax.swing.JLabel lvitamin1;
-    private javax.swing.JLabel lvitamin3;
     private javax.swing.JComboBox<String> nomorSapi;
     private javax.swing.JTextArea saran;
     private javax.swing.JTable tableSapi;

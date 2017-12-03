@@ -35,27 +35,27 @@ public class v_CRUDPAKAN extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        persentaseTDN = new javax.swing.JTextField();
+        harga = new javax.swing.JTextField();
         persentasePK = new javax.swing.JTextField();
         persentaseBK = new javax.swing.JTextField();
         namaPakan = new javax.swing.JTextField();
         lNamaPakan = new javax.swing.JLabel();
-        lJenisPakan = new javax.swing.JLabel();
         lBk = new javax.swing.JLabel();
         lPK = new javax.swing.JLabel();
         lTDN = new javax.swing.JLabel();
-        cbJenisPakan = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         pakan = new javax.swing.JTable();
         btnKembali = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         btnTambah = new javax.swing.JButton();
         btnUPdate = new javax.swing.JButton();
+        persentaseTDN = new javax.swing.JTextField();
+        lTDN1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(persentaseTDN, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 130, 170, 50));
+        getContentPane().add(harga, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, 170, 50));
         getContentPane().add(persentasePK, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 210, 170, 50));
         getContentPane().add(persentaseBK, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 130, 170, 50));
         getContentPane().add(namaPakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 170, 50));
@@ -63,20 +63,14 @@ public class v_CRUDPAKAN extends javax.swing.JFrame {
         lNamaPakan.setText("NAMA PAKAN");
         getContentPane().add(lNamaPakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 90, 30));
 
-        lJenisPakan.setText("JENIS PAKAN");
-        getContentPane().add(lJenisPakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, -1, -1));
-
         lBk.setText("PERSENTASE BK");
         getContentPane().add(lBk, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 150, -1, -1));
 
         lPK.setText("PERSENTASE PK");
         getContentPane().add(lPK, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 230, -1, -1));
 
-        lTDN.setText("PERSENTASE TDN");
-        getContentPane().add(lTDN, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 150, -1, -1));
-
-        cbJenisPakan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-" }));
-        getContentPane().add(cbJenisPakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 220, 170, 40));
+        lTDN.setText("HARGA");
+        getContentPane().add(lTDN, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, -1, -1));
 
         pakan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -104,6 +98,10 @@ public class v_CRUDPAKAN extends javax.swing.JFrame {
 
         btnUPdate.setText("UPDATE");
         getContentPane().add(btnUPdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 640, 80, 60));
+        getContentPane().add(persentaseTDN, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 130, 170, 50));
+
+        lTDN1.setText("PERSENTASE TDN");
+        getContentPane().add(lTDN1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 150, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -148,13 +146,13 @@ public class v_CRUDPAKAN extends javax.swing.JFrame {
     private javax.swing.JButton btnKembali;
     private javax.swing.JButton btnTambah;
     private javax.swing.JButton btnUPdate;
-    private javax.swing.JComboBox<String> cbJenisPakan;
+    private javax.swing.JTextField harga;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lBk;
-    private javax.swing.JLabel lJenisPakan;
     private javax.swing.JLabel lNamaPakan;
     private javax.swing.JLabel lPK;
     private javax.swing.JLabel lTDN;
+    private javax.swing.JLabel lTDN1;
     private javax.swing.JTextField namaPakan;
     private javax.swing.JTable pakan;
     private javax.swing.JTextField persentaseBK;
@@ -198,14 +196,9 @@ public class v_CRUDPAKAN extends javax.swing.JFrame {
         return persentaseTDN;
     }
 
-    public void setNomorSapi(String[] comboAngkatan) {
-        for (String a : comboAngkatan) {
-            this.cbJenisPakan.addItem(a);
-        }
+    public JTextField getHarga() {
+        return harga;
     }
 
-    public JComboBox<String> getCbJenisPakan() {
-        return cbJenisPakan;
-    }
     
 }

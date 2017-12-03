@@ -36,7 +36,7 @@ public class m_makanan extends modelInheritance {
         a = 0;
         return tahun;
     }
-    
+
     public String[] namaMakanan() throws SQLException {
         String query = "SELECT * FROM nama_makanan";
         ResultSet rs = kon.getResult(query);
@@ -58,12 +58,28 @@ public class m_makanan extends modelInheritance {
         return super.delete(queries); //To change body of generated methods, choose Tools | Templates.
     }
 
+    public boolean delete2(String query) throws SQLException {
+        String queries = "DELETE FROM nama_makanan WHERE id_makanan=" + query;
+        return super.delete(queries); //To change body of generated methods, choose Tools | Templates.
+    }
+
     @Override
     public boolean save(String query) throws SQLException {
-        String queries = "INSERT INTO makanan (id_makanan, id_jenis, id_nama_makanan) VALUES ("+ query + ")";
+        String queries = "INSERT INTO makanan (id_makanan, id_jenis, id_nama_makanan) VALUES (" + query + ")";
         return super.save(queries); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
+    public boolean save2(String query) throws SQLException {
+        String queries = "INSERT INTO nama_makanan VALUES (" + query + ")";
+        return super.save(queries); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean update(String query) throws SQLException {
+        String queries = "UPDATE nama_makanan SET " + query;
+        return super.update(queries); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public DefaultTableModel getTable() throws SQLException {
         String header[] = {"Id Makanan", "Jenis Makanan", "Nama Makanan"};
         DefaultTableModel tabelModel = new DefaultTableModel(null, header);
@@ -82,4 +98,21 @@ public class m_makanan extends modelInheritance {
         return tabelModel;
     }
 
+    public DefaultTableModel getTable2() throws SQLException {
+        String header[] = {"Id Makanan", "Nama Makanan", "Persentase BK", "Persentase PK", "Persentase TDN", "Harga"};
+        DefaultTableModel tabelModel = new DefaultTableModel(null, header);
+        ResultSet rs = kon.getResult("SELECT * FROM nama_makanan");
+        for (int i = tabelModel.getRowCount() - 1; i >= 0; i--) {
+            tabelModel.removeRow(i);
+        }
+        while (rs.next()) {
+            String kolom[] = new String[6];
+            for (int i = 0; i < kolom.length; i++) {
+                kolom[i] = rs.getString(i + 1);
+            }
+
+            tabelModel.addRow(kolom);
+        }
+        return tabelModel;
+    }
 }

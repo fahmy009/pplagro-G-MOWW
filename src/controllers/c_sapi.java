@@ -16,7 +16,6 @@ import views.v_ADMIN;
 import views.v_ADMINSAPI;
 import views.v_CRUDJENIS;
 import views.v_JENISSAPI;
-import views.v_LAPORAN;
 
 /**
  *
@@ -27,6 +26,15 @@ public class c_sapi {
     v_ADMINSAPI view;
     m_sapi model;
     v_CRUDJENIS view2;
+    v_JENISSAPI view3;
+
+    public c_sapi(v_JENISSAPI view) {
+        this.view3 = view;
+        view.setVisible(true);
+        view.btnJenisSapi(new btnJenis());
+        view.btnSapi(new btnSapi());
+        view.btnLogout(new kembaliAdmin());
+    }
 
     public c_sapi(v_ADMINSAPI view, m_sapi model) throws SQLException {
         this.view = view;
@@ -50,6 +58,43 @@ public class c_sapi {
         view2.btnTambah(new btnTambahJenis());
     }
 
+    private class kembaliAdmin implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            c_admin a = new c_admin(new v_ADMIN());
+            view3.dispose();
+        }
+    }
+
+    private class btnSapi implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            try {
+                c_sapi a = new c_sapi(new v_ADMINSAPI(), new m_sapi());
+                view3.dispose();
+            } catch (SQLException ex) {
+                Logger.getLogger(c_sapi.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+    }
+
+    private class btnJenis implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            try {
+                c_sapi a = new c_sapi(new v_CRUDJENIS(), new m_sapi());
+                view3.dispose();
+            } catch (SQLException ex) {
+                Logger.getLogger(c_sapi.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+    }
+
     private class btnHapusJenis implements ActionListener {
 
         @Override
@@ -71,7 +116,7 @@ public class c_sapi {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            c_admin a = new c_admin(new v_JENISSAPI());
+            c_sapi a = new c_sapi(new v_JENISSAPI());
             view2.dispose();
         }
     }
@@ -111,7 +156,7 @@ public class c_sapi {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            c_admin a = new c_admin(new v_ADMIN());
+            c_sapi a = new c_sapi(new v_JENISSAPI());
             view.dispose();
         }
     }

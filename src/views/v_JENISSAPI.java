@@ -44,19 +44,19 @@ public class v_JENISSAPI extends javax.swing.JFrame {
         btnJenisSapi.setBorder(null);
         btnJenisSapi.setBorderPainted(false);
         btnJenisSapi.setContentAreaFilled(false);
-        getContentPane().add(btnJenisSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, 240, 290));
+        getContentPane().add(btnJenisSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, 250, 290));
 
         btnSapi.setBorder(null);
         btnSapi.setBorderPainted(false);
         btnSapi.setContentAreaFilled(false);
-        getContentPane().add(btnSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 210, 220, 290));
+        getContentPane().add(btnSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 220, 220, 290));
 
         btnLogout.setBorder(null);
         btnLogout.setBorderPainted(false);
         btnLogout.setContentAreaFilled(false);
-        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 10, 70, 70));
+        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 670, 160, 60));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/admin-sapii.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/admin sapi.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();

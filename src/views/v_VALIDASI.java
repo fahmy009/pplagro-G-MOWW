@@ -43,6 +43,7 @@ public class v_VALIDASI extends javax.swing.JFrame {
         tabelValidasi = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
         saran = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -86,7 +87,10 @@ public class v_VALIDASI extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 540, 430));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/admin-validasi.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/val.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 10, 240, 70));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/admin-validasi.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
@@ -132,6 +136,7 @@ public class v_VALIDASI extends javax.swing.JFrame {
     private javax.swing.JButton btnTolak;
     private javax.swing.JButton btnValidasi;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea saran;

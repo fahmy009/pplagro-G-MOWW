@@ -7,22 +7,20 @@ package views;
 
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
-import javax.swing.JTable;
 
 /**
  *
  * @author Muhammad Fahmy
  */
-public class v_VALIDASI_P extends javax.swing.JFrame {
+public class v_MENUPAKAN extends javax.swing.JFrame {
 
     /**
-     * Creates new form v_VALIDASI_P
+     * Creates new form v_NAMAMAKANAN
      */
-    public v_VALIDASI_P() {
+    public v_MENUPAKAN() {
         initComponents();
         this.setLocationRelativeTo(this);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-
     }
 
     /**
@@ -34,39 +32,31 @@ public class v_VALIDASI_P extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnKembali = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        validasi = new javax.swing.JTable();
+        btnNamaPakan = new javax.swing.JButton();
+        btnLogout = new javax.swing.JButton();
+        btnPakan = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnKembali.setBorder(null);
-        btnKembali.setBorderPainted(false);
-        btnKembali.setContentAreaFilled(false);
-        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 680, 160, 50));
+        btnNamaPakan.setBorder(null);
+        btnNamaPakan.setBorderPainted(false);
+        btnNamaPakan.setContentAreaFilled(false);
+        getContentPane().add(btnNamaPakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 210, 210));
 
-        validasi.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        validasi.setEnabled(false);
-        validasi.setGridColor(new java.awt.Color(255, 255, 255));
-        validasi.setOpaque(false);
-        jScrollPane1.setViewportView(validasi);
+        btnLogout.setBorder(null);
+        btnLogout.setBorderPainted(false);
+        btnLogout.setContentAreaFilled(false);
+        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 680, 160, 50));
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 1220, 530));
+        btnPakan.setBorder(null);
+        btnPakan.setBorderPainted(false);
+        btnPakan.setContentAreaFilled(false);
+        getContentPane().add(btnPakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 270, 220, 210));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/peternak lihat validasi.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/pakan.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
@@ -89,37 +79,43 @@ public class v_VALIDASI_P extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(v_VALIDASI_P.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(v_MENUPAKAN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(v_VALIDASI_P.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(v_MENUPAKAN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(v_VALIDASI_P.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(v_MENUPAKAN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(v_VALIDASI_P.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(v_MENUPAKAN.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+        //</edibtnLogout>
+        //</edibtnLogout>
+        //</edibtnLogout>
+        //</edibtnLogout>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new v_VALIDASI_P().setVisible(true);
+                new v_MENUPAKAN().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnKembali;
+    private javax.swing.JButton btnLogout;
+    private javax.swing.JButton btnNamaPakan;
+    private javax.swing.JButton btnPakan;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable validasi;
     // End of variables declaration//GEN-END:variables
 
-    public JTable getValidasi() {
-        return validasi;
+    public void btnLogout(ActionListener a) {
+        this.btnLogout.addActionListener(a);
     }
 
-    public void btnKembali(ActionListener a) {
-        btnKembali.addActionListener(a);
+    public void btnNamaPakan(ActionListener a) {
+        this.btnNamaPakan.addActionListener(a);
     }
 
+    public void btnPakan(ActionListener a) {
+        this.btnPakan.addActionListener(a);
+    }
 }

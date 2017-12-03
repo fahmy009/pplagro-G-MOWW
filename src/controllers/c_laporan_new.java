@@ -536,35 +536,44 @@ public class c_laporan_new {
                 }
 
                 String pertumbuhan = null;
-                int pertumbuhan1 = 0;
+                double pertumbuhan1 = 0;
 
                 if (Float.valueOf(view.getBeratSapi().getText()) > 300 && Float.valueOf(view.getBeratSapi().getText()) < 600 && view.getJenisSapi().getText().equalsIgnoreCase("") && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
                     pertumbuhan = "0.6 - 0.8";
-                    pertumbuhan1 = (int) (rand.nextInt((int) ((0.8 - 0.6) + 0.8)) + 0.6);
+                    pertumbuhan1 = 0.6;
+//                    pertumbuhan1 = rand.nextInt((int)(((0.8 - 0.6) + 0.8) + 0.8));
                 } else if (Float.valueOf(view.getBeratSapi().getText()) > 400 && Float.valueOf(view.getBeratSapi().getText()) < 600 && view.getJenisSapi().getText().equalsIgnoreCase("bali") && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
                     pertumbuhan = "0.6 - 0.8";
-                    pertumbuhan1 = (int) (rand.nextInt((int) ((0.8 - 0.6) + 0.8)) + 0.6);
+                    pertumbuhan1 = 0.7;
+//                    pertumbuhan1 = rand.nextInt((int) (((0.8 - 0.6) + 0.8) + 0.8));
                 } else if (Float.valueOf(view.getBeratSapi().getText()) > 250 && Float.valueOf(view.getBeratSapi().getText()) < 300 && view.getJenisSapi().getText().equalsIgnoreCase("madura") && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
                     pertumbuhan = "0.3 - 0.6";
-                    pertumbuhan1 = (int) (rand.nextInt((int) ((0.6 - 0.3) + 0.6)) + 0.3);
+//                    pertumbuhan1 = rand.nextInt((int) (((0.6 - 0.3) + 0.6) + 0.3));
+                    pertumbuhan1 = 0.4;
                 } else if (Float.valueOf(view.getBeratSapi().getText()) < 800 && view.getJenisSapi().getText().equalsIgnoreCase("brahma") && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
                     pertumbuhan = "0.8 - 1.2";
-                    pertumbuhan1 = (int) (rand.nextInt((int) ((1.2 - 0.8) + 1.2)) + 0.8);
+                    pertumbuhan1 = 0.8;
+//                    pertumbuhan1 = rand.nextInt((int) (((1.2 - 0.8) + 1.2) + 0.8));
                 } else if (Float.valueOf(view.getBeratSapi().getText()) > 800 && Float.valueOf(view.getBeratSapi().getText()) < 1200 && view.getJenisSapi().getText().equalsIgnoreCase("limousin") && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
                     pertumbuhan = "1.2 - 1.4";
-                    pertumbuhan1 = (int) (rand.nextInt((int) ((1.4 - 1.2) + 1.4)) + 1.2);
+                    pertumbuhan1 = 1.3;
+//                    pertumbuhan1 = rand.nextInt((int) (((1.4 - 1.2) + 1.4) + 1.2));
                 } else if (Float.valueOf(view.getBeratSapi().getText()) > 800 && Float.valueOf(view.getBeratSapi().getText()) < 1000 && view.getJenisSapi().getText().equalsIgnoreCase("Aberdeen Angus") && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
                     pertumbuhan = "1 - 1.2";
-                    pertumbuhan1 = rand.nextInt((int) ((1.2 - 1) + 1.2)) + 1;
+                    pertumbuhan1 = 1.2;
+//                    pertumbuhan1 = rand.nextInt((int) ((1.2 - 1) + 1.2)) + 1;
                 } else if (Float.valueOf(view.getBeratSapi().getText()) > 800 && Float.valueOf(view.getBeratSapi().getText()) < 1000 && view.getJenisSapi().getText().equalsIgnoreCase("Simmental") && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
                     pertumbuhan = "1.2 - 1.4";
-                    pertumbuhan1 = (int) (rand.nextInt((int) ((1.4 - 1.2) + 1.4)) + 1.2);
+                    pertumbuhan1 = 1.3;
+//                    pertumbuhan1 = rand.nextInt((int) (((1.4 - 1.2) + 1.4) + 1.2));
                 } else if (Float.valueOf(view.getBeratSapi().getText()) > 200 && Float.valueOf(view.getBeratSapi().getText()) < 500 && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
                     pertumbuhan = "0.1 - 0.4";
-                    pertumbuhan1 = (int) (rand.nextInt((int) ((0.4 - 0.1) + 0.4)) + 0.1);
+                    pertumbuhan1 = 0.3;
+//                    pertumbuhan1 = rand.nextInt((int) (((0.4 - 0.1) + 0.4) + 0.1));
                 } else if (Float.valueOf(view.getBeratSapi().getText()) > 500 && Integer.valueOf(view.getUmurSapi().getText()) > 1) {
                     pertumbuhan = "0.6 - 0.8";
-                    pertumbuhan1 = (int) (rand.nextInt((int) ((0.8 - 0.6) + 0.8)) + 0.6);
+                    pertumbuhan1 = 0.6;
+//                    pertumbuhan1 = rand.nextInt((int) (((0.8 - 0.6) + 0.8) + 0.6));
                 }
 
                 float atas = persentaseA * bk_konsentrat;
@@ -617,8 +626,8 @@ public class c_laporan_new {
                 String saran3 = "pertumbuhan bobot sapi normal\n"
                         + "    dengan pertumbuhan berat selama 1 bulan sebesar = " + (pertumbuhan1 * 30) + " KG\n"
                         + "    kombinasi pakan, vaksin & vitamin sudah memenuhi dengan apa yang diharapkan.\n"
-                        + "    dengan biaya pakan sebesar Rp. " + (harga_pakan * 0.1) + " , vitamin sebesar Rp. " + harga_vitamin + " , dan vaksin sebesar Rp. " + harga_vaksin + " .\n"
-                        + "    sehingga biaya total dalam 1 Bulan sebesar = Rp. 150000 dengan harga daging sapi = Rp.110.000/Kg \n"
+//                        + "    dengan biaya pakan sebesar Rp. " + (harga_pakan * 0.1) + " , vitamin sebesar Rp. " + harga_vitamin + " , dan vaksin sebesar Rp. " + harga_vaksin + " .\n"
+                        + "    sehingga biaya total dalam 1 Bulan sebesar = Rp. 250000 dengan harga daging sapi = Rp.110.000/Kg \n"
                         + "    maka peternak akan mendapatkan keuntungan sebesar = Rp. " + Math.abs((((pertumbuhan1 * 30) * 110000) - (harga_pakan * 3))) + "/bulan";
                 String saran4 = "sapi stress \n"
                         + "    pertumbuhan bobot sapi menurun selama 1 bulan sebesar = " + (pertumbuhan1 * 30) + " KG\n"

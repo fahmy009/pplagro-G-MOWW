@@ -83,7 +83,8 @@ public class c_hitung {
         public void keyReleased(KeyEvent e) {
             //rumus Scroll untuk menghitung bobot sapi dengan inputan lingkar dada sapi
             //berat = (lingkardada + 22)^2 / 100
-            String regex = "\\d+";
+//            String regex = "\\d+";
+            String regex = "[0-9]*\\.?[0-9]*";
             if (view.getLingkarDada().getText().matches(regex)) {
                 hasil = (Math.pow((Double.valueOf(view.getLingkarDada().getText()) + 22), 2)) / 100;
                 int hasilP = (int) Math.round(hasil);

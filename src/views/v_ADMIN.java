@@ -41,7 +41,6 @@ public class v_ADMIN extends javax.swing.JFrame {
         btnLaporan = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
         btnSapi = new javax.swing.JButton();
-        btnProfile = new javax.swing.JButton();
         gambar = new javax.swing.JLabel();
 
         admin.setFont(new java.awt.Font("Tall & Lean", 0, 36)); // NOI18N
@@ -56,17 +55,17 @@ public class v_ADMIN extends javax.swing.JFrame {
         btnMakanan.setBorder(null);
         btnMakanan.setBorderPainted(false);
         btnMakanan.setContentAreaFilled(false);
-        getContentPane().add(btnMakanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, 110, 140));
+        getContentPane().add(btnMakanan, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 140, 370, 260));
 
         btnKandang.setBorder(null);
         btnKandang.setBorderPainted(false);
         btnKandang.setContentAreaFilled(false);
-        getContentPane().add(btnKandang, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 120, 120));
+        getContentPane().add(btnKandang, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 370, 250));
 
         btnLaporan.setBorder(null);
         btnLaporan.setBorderPainted(false);
         btnLaporan.setContentAreaFilled(false);
-        getContentPane().add(btnLaporan, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 640, 180, 100));
+        getContentPane().add(btnLaporan, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 440, 360, 250));
 
         btnLogout.setBorder(null);
         btnLogout.setContentAreaFilled(false);
@@ -75,14 +74,9 @@ public class v_ADMIN extends javax.swing.JFrame {
         btnSapi.setBorder(null);
         btnSapi.setBorderPainted(false);
         btnSapi.setContentAreaFilled(false);
-        getContentPane().add(btnSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 100, 130));
+        getContentPane().add(btnSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 440, 360, 250));
 
-        btnProfile.setBorder(null);
-        btnProfile.setBorderPainted(false);
-        btnProfile.setContentAreaFilled(false);
-        getContentPane().add(btnProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 100, 110));
-
-        gambar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/admin-home.png"))); // NOI18N
+        gambar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/home admin.png"))); // NOI18N
         getContentPane().add(gambar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
@@ -129,7 +123,6 @@ public class v_ADMIN extends javax.swing.JFrame {
     private javax.swing.JButton btnLaporan;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnMakanan;
-    private javax.swing.JButton btnProfile;
     private javax.swing.JButton btnSapi;
     private javax.swing.JLabel gambar;
     // End of variables declaration//GEN-END:variables
@@ -154,8 +147,4 @@ public class v_ADMIN extends javax.swing.JFrame {
         btnSapi.addActionListener(a);
     }
 
-    public void getBtnProfile(ActionListener a) {
-        btnProfile.addActionListener(a);
-    }
-
-}
+  }

@@ -36,6 +36,7 @@ public class v_PETERNAK extends javax.swing.JFrame {
         btnValidasi = new javax.swing.JButton();
         btnPertumbuhan = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
+        btnRangking = new javax.swing.JButton();
         btnPenghitung = new javax.swing.JButton();
         peternak = new javax.swing.JLabel();
 
@@ -46,24 +47,29 @@ public class v_PETERNAK extends javax.swing.JFrame {
         btnValidasi.setBorder(null);
         btnValidasi.setBorderPainted(false);
         btnValidasi.setContentAreaFilled(false);
-        getContentPane().add(btnValidasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 450, 120, 120));
+        getContentPane().add(btnValidasi, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 440, 360, 250));
 
         btnPertumbuhan.setBorder(null);
         btnPertumbuhan.setBorderPainted(false);
         btnPertumbuhan.setContentAreaFilled(false);
-        getContentPane().add(btnPertumbuhan, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 160, 190));
+        getContentPane().add(btnPertumbuhan, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 140, 360, 250));
 
         btnLogout.setBorder(null);
         btnLogout.setBorderPainted(false);
         btnLogout.setContentAreaFilled(false);
         getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 10, 70, 70));
 
+        btnRangking.setBorder(null);
+        btnRangking.setBorderPainted(false);
+        btnRangking.setContentAreaFilled(false);
+        getContentPane().add(btnRangking, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 440, 360, 250));
+
         btnPenghitung.setBorder(null);
         btnPenghitung.setBorderPainted(false);
         btnPenghitung.setContentAreaFilled(false);
-        getContentPane().add(btnPenghitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 140, 110));
+        getContentPane().add(btnPenghitung, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 360, 250));
 
-        peternak.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/peternak-home.png"))); // NOI18N
+        peternak.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/home peternak.png"))); // NOI18N
         getContentPane().add(peternak, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 770));
 
         pack();
@@ -109,6 +115,7 @@ public class v_PETERNAK extends javax.swing.JFrame {
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnPenghitung;
     private javax.swing.JButton btnPertumbuhan;
+    private javax.swing.JButton btnRangking;
     private javax.swing.JButton btnValidasi;
     private javax.swing.JLabel peternak;
     // End of variables declaration//GEN-END:variables
@@ -129,4 +136,7 @@ public class v_PETERNAK extends javax.swing.JFrame {
         btnPenghitung.addActionListener(a);
     }
 
+    public void getBtnRangking(ActionListener a) {
+        btnRangking.addActionListener(a);
+    }
 }

@@ -63,7 +63,7 @@ public class v_LOGIN extends javax.swing.JFrame {
         btnLogin.setContentAreaFilled(false);
         getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 540, 550, 80));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/login.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/login.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();

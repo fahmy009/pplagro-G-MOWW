@@ -36,20 +36,17 @@ public class v_CRUDJENIS extends javax.swing.JFrame {
     private void initComponents() {
 
         jenisSapi = new javax.swing.JTextField();
-        lNamaPakan = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         sapi = new javax.swing.JTable();
         btnKembali = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
         btnTambah = new javax.swing.JButton();
+        lNamaPakan = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jenisSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 350, 50));
-
-        lNamaPakan.setText("JENIS SAPI");
-        getContentPane().add(lNamaPakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, 90, 30));
+        getContentPane().add(jenisSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 360, 50));
 
         sapi.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -64,16 +61,25 @@ public class v_CRUDJENIS extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(sapi);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, 1010, 290));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 1020, 420));
 
-        btnKembali.setText("KEMBALI");
-        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 650, 80, 60));
+        btnKembali.setBorder(null);
+        btnKembali.setBorderPainted(false);
+        btnKembali.setContentAreaFilled(false);
+        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 690, 160, 50));
 
-        btnDelete.setText("HAPUS");
-        getContentPane().add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 640, 80, 60));
+        btnDelete.setBorder(null);
+        btnDelete.setBorderPainted(false);
+        btnDelete.setContentAreaFilled(false);
+        getContentPane().add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 680, 160, 60));
 
-        btnTambah.setText("TAMBAH");
-        getContentPane().add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 640, 80, 60));
+        btnTambah.setBorder(null);
+        btnTambah.setBorderPainted(false);
+        btnTambah.setContentAreaFilled(false);
+        getContentPane().add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 680, 150, 60));
+
+        lNamaPakan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/admin jenis sapi.png"))); // NOI18N
+        getContentPane().add(lNamaPakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
