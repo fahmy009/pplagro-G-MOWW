@@ -46,6 +46,9 @@ public class v_CRUDJENIS extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jenisSapi.setBorder(null);
+        jenisSapi.setOpaque(false);
         getContentPane().add(jenisSapi, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 140, 360, 50));
 
         sapi.setModel(new javax.swing.table.DefaultTableModel(

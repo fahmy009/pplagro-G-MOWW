@@ -30,6 +30,7 @@ public class m_sapi_new extends modelInheritance {
     public static String pk2;
     public static String bk3;
     public static String pk3;
+    public static String id_pakan;
     public static double h;
 
     public m_sapi_new() throws SQLException {
@@ -237,6 +238,20 @@ public class m_sapi_new extends modelInheritance {
         return super.save(queries); //To change body of generated methods, choose Tools | Templates.
     }
 
+    public boolean save4(String query) throws SQLException {
+        String queries = "INSERT INTO laporan_pertumbuhan VALUES (" + query + ")";
+        return super.save(queries); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String idpakan(String nama) throws SQLException {
+        String query = "SELECT * FROM makanan m join nama_makanan n on m.id_nama_makanan=n.id_nama_makanan where n.nama_makanan='" + nama + "'";
+        ResultSet rs = kon.getResult(query);
+        while (rs.next()) {
+            id_pakan = rs.getString("m.id_makanan");
+        }
+        return id_pakan;
+    }
+
     public boolean delete3(String query) throws SQLException {
         String queries = "DELETE FROM jenis_sapi where id_jenis_sapi=" + query;
         return super.delete(queries); //To change body of generated methods, choose Tools | Templates.
@@ -282,8 +297,8 @@ public class m_sapi_new extends modelInheritance {
         String queries = "UPDATE sapi SET saran=" + query + ", id_validasi=3 WHERE id_sapi=" + id;
         return super.update(queries); //To change body of generated methods, choose Tools | Templates.
     }
-    
-     public DefaultTableModel getTableRangking() throws SQLException {
+
+    public DefaultTableModel getTableRangking() throws SQLException {
         String header[] = {"Nomor Sapi", "Jenis Sapi", "Umur Sapi", "Berat Sapi", "Rangking"};
         DefaultTableModel tabelModel = new DefaultTableModel(null, header);
         kon.execute("SET @rank=0;");
