@@ -39,10 +39,6 @@ public class v_CRUDPAKAN extends javax.swing.JFrame {
         persentasePK = new javax.swing.JTextField();
         persentaseBK = new javax.swing.JTextField();
         namaPakan = new javax.swing.JTextField();
-        lNamaPakan = new javax.swing.JLabel();
-        lBk = new javax.swing.JLabel();
-        lPK = new javax.swing.JLabel();
-        lTDN = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         pakan = new javax.swing.JTable();
         btnKembali = new javax.swing.JButton();
@@ -55,22 +51,22 @@ public class v_CRUDPAKAN extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(harga, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 210, 170, 50));
-        getContentPane().add(persentasePK, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 210, 170, 50));
-        getContentPane().add(persentaseBK, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 130, 170, 50));
-        getContentPane().add(namaPakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 170, 50));
 
-        lNamaPakan.setText("NAMA PAKAN");
-        getContentPane().add(lNamaPakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, 90, 30));
+        harga.setBorder(null);
+        harga.setOpaque(false);
+        getContentPane().add(harga, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 200, 280, 50));
 
-        lBk.setText("PERSENTASE BK");
-        getContentPane().add(lBk, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 150, -1, -1));
+        persentasePK.setBorder(null);
+        persentasePK.setOpaque(false);
+        getContentPane().add(persentasePK, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 280, 50));
 
-        lPK.setText("PERSENTASE PK");
-        getContentPane().add(lPK, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 230, -1, -1));
+        persentaseBK.setBorder(null);
+        persentaseBK.setOpaque(false);
+        getContentPane().add(persentaseBK, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 280, 50));
 
-        lTDN.setText("HARGA");
-        getContentPane().add(lTDN, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, -1, -1));
+        namaPakan.setBorder(null);
+        namaPakan.setOpaque(false);
+        getContentPane().add(namaPakan, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 120, 280, 50));
 
         pakan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -85,23 +81,35 @@ public class v_CRUDPAKAN extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(pakan);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, 1010, 290));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 970, 300));
 
-        btnKembali.setText("KEMBALI");
-        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 650, 80, 60));
+        btnKembali.setBorder(null);
+        btnKembali.setBorderPainted(false);
+        btnKembali.setContentAreaFilled(false);
+        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 680, 160, 60));
 
-        btnDelete.setText("HAPUS");
-        getContentPane().add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 640, 80, 60));
+        btnDelete.setBorder(null);
+        btnDelete.setBorderPainted(false);
+        btnDelete.setContentAreaFilled(false);
+        getContentPane().add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 680, 160, 60));
 
-        btnTambah.setText("TAMBAH");
-        getContentPane().add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 640, 80, 60));
+        btnTambah.setBorder(null);
+        btnTambah.setBorderPainted(false);
+        btnTambah.setContentAreaFilled(false);
+        getContentPane().add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 680, 170, 60));
 
-        btnUPdate.setText("UPDATE");
-        getContentPane().add(btnUPdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 640, 80, 60));
-        getContentPane().add(persentaseTDN, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 130, 170, 50));
+        btnUPdate.setBorder(null);
+        btnUPdate.setBorderPainted(false);
+        btnUPdate.setContentAreaFilled(false);
+        getContentPane().add(btnUPdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 680, 160, 60));
 
+        persentaseTDN.setBorder(null);
+        persentaseTDN.setOpaque(false);
+        getContentPane().add(persentaseTDN, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 120, 280, 50));
+
+        lTDN1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/admin jenis pakan1.png"))); // NOI18N
         lTDN1.setText("PERSENTASE TDN");
-        getContentPane().add(lTDN1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 150, -1, -1));
+        getContentPane().add(lTDN1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -148,10 +156,6 @@ public class v_CRUDPAKAN extends javax.swing.JFrame {
     private javax.swing.JButton btnUPdate;
     private javax.swing.JTextField harga;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lBk;
-    private javax.swing.JLabel lNamaPakan;
-    private javax.swing.JLabel lPK;
-    private javax.swing.JLabel lTDN;
     private javax.swing.JLabel lTDN1;
     private javax.swing.JTextField namaPakan;
     private javax.swing.JTable pakan;

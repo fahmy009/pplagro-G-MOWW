@@ -27,13 +27,8 @@ public class m_user {
         String query = "select * from user where username = '" + user + "' and password = '" + pass + "'";
         ResultSet rs = kon.getResult(query);
         if (rs.next()) {
-            username = user;
             level_user = rs.getString("level");
         }
-    }
-
-    public String getStatus() {
-        return status;
     }
 
     public String getStatusUser() {
