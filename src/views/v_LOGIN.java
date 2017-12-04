@@ -38,13 +38,11 @@ public class v_LOGIN extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnKembali = new javax.swing.JButton();
         username = new javax.swing.JTextField();
         password = new javax.swing.JPasswordField();
         btnLogin = new javax.swing.JButton();
+        btnKembali = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-
-        btnKembali.setText("KEMBALI");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -62,6 +60,14 @@ public class v_LOGIN extends javax.swing.JFrame {
         btnLogin.setBorderPainted(false);
         btnLogin.setContentAreaFilled(false);
         getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 540, 550, 80));
+
+        btnKembali.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/x.png"))); // NOI18N
+        btnKembali.setBorder(null);
+        btnKembali.setBorderPainted(false);
+        btnKembali.setContentAreaFilled(false);
+        btnKembali.setDefaultCapable(false);
+        btnKembali.setFocusPainted(false);
+        getContentPane().add(btnKembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 10, 60, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uiimages/login.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 770));
